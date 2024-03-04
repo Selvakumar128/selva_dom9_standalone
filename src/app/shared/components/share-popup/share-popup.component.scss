@@ -1,0 +1,151 @@
+@import '../../../../assets/theme/theme-variable.scss';
+
+.sharePopupContainer {
+    .cardSubContainer {
+        .card {
+            .content {
+                padding: 30px;
+                padding-top: 0;
+
+                .inputContainer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    column-gap: 20px;
+                }
+
+                .socialIcons {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    column-gap: 20px;
+                    margin-top: 20px;
+
+                    a {
+                        padding: 5px;
+                        border: 1px solid $secondaryColor;
+                        border-radius: 10px;
+
+                        img {
+                            width: 35px;
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+::ng-deep {
+    .sharePopupContainer {
+        .card {
+            .p-card {
+                font-family: $regular-font;
+                background-color: $whiteColor;
+                color: $blackColor;
+                box-shadow: none !important;
+            }
+
+            .p-card .p-card-content {
+                padding: 0 !important;
+            }
+
+            .p-card .p-card-body {
+                padding: 0px 0px 25px 0px !important;
+            }
+
+            .p-inputtext.p-inputtext-sm {
+                width: 95%;
+                background-color: $whiteColor;
+                margin: 10px 0px;
+                border-radius: 10px;
+                position: relative;
+                color: $ph;
+            }
+
+            .p-button {
+                font-family: $regular-font;
+                font-size: $sz-18-font;
+                background-color: $secondaryColor;
+                border: 1px solid transparent;
+                color: $primaryColor;
+                border-radius: 8px;
+                padding: 8px 25px;
+                position: relative;
+                text-align: center;
+                transition: all .6s ease-in-out;
+            }
+
+            .p-button:focus {
+                box-shadow: none;
+            }
+
+            .p-button:enabled:hover {
+                background-color: $hoverBrown;
+                color: $whiteColor;
+                border: 1px solid $hoverBrown;
+                transition: all .6s ease-in-out;
+                transition-duration: 0.5s;
+                transition-timing-function: ease-in-out;
+                transition-delay: 0s;
+                transition-property: all;
+            }
+
+            .p-button:enabled:active {
+                background-color: $hoverBrown;
+                border: 1px solid $secondaryColor;
+            }
+
+            .p-inputtext:enabled:focus {
+                border: 1px solid $hoverBrown;
+                box-shadow: 0 0 0 $secondaryColor;
+            }
+
+            .p-inputtext:enabled:hover {
+                border-color: $inputBorder;
+            }
+
+        }
+
+    }
+
+    .p-dialog .p-dialog-header {
+        padding: 0;
+    }
+
+    .p-dialog .p-dialog-content {
+        color: $darkbrown;
+        padding: 0px 25px;
+    }
+
+    .p-dialog .p-dialog-header .p-dialog-header-icon {
+        color: $darkbrown;
+        position: relative;
+        top: 10px;
+        right: 20px;
+    }
+
+    .p-dialog .p-dialog-header .p-dialog-header-icon:focus {
+        box-shadow: none !important;
+    }
+
+}
+
+@media (max-width:1025px) {
+    .sharePopupContainer {
+        .cardSubContainer {
+            .card {
+                .content {
+                    padding: 0;
+
+                    .inputContainer {
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+    }
+}

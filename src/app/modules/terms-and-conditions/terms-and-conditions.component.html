@@ -1,0 +1,44 @@
+
+
+
+<div class="otrDiv">
+    <div class="whatsappContainer" *ngFor="let wp of whatsapp">
+        <a href="https://web.whatsapp.com"
+          ><img class="whatsapp" src="{{ wp.img }}"
+        /></a>
+      </div>
+    <div class="innerDiv">
+        <div class="header" *ngFor="let hd of header">
+            <div class="headerImg">
+              <!-- <img src="{{ hd.headerImg }}" /> -->
+            </div>
+            <div class="headerTitle">
+              <h4>{{ hd.subHeader1 }}</h4>
+              <h1>{{ hd.mainHeader1 }}</h1>
+            </div>
+          </div>
+          <div>
+            <h3>DOM 9 Terms & Conditions</h3>
+          </div>
+          <div class="cardCont"  *ngFor="let l2 of list2">
+            <div class="para1">
+                <p>{{l2.para1}}</p>
+            </div>
+            <div  class="para1">
+                <p>{{l2.para2}}</p>
+            </div>
+            <div  class="para1">
+                <p>{{l2.para3}}</p>
+            </div>
+            <div class="para1">
+                <p>{{l2.para4}}</p>
+            </div>
+            <div  class="para1">
+                <p>{{l2.para5}}</p>
+            </div>
+            <div  class="para1">
+                <p>{{l2.para6}}</p>
+            </div>
+            </div>
+    </div>
+</div>

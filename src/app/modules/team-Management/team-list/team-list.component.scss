@@ -1,0 +1,300 @@
+@import '../../../../assets/theme/theme-variable.scss';
+
+
+//MAIN CONTAINER STARTS HERE--------------------------------------------------------------->>>>>>>>>>>
+
+.teamContainer {
+    overflow: hidden;
+
+    .whatsappContainer {
+        float: right;
+
+        .whatsapp {
+            position: fixed;
+            cursor: pointer;
+            height: 70px;
+            bottom: 0%;
+            right: 10px;
+            z-index: 99999999;
+        }
+    }
+
+    .mainContainer {
+        background-color: $primaryColor;
+        padding: 30px 50px;
+
+        .header {
+            display: flex;
+            padding: 20px 50px;
+
+            .headerImg {
+                img {
+                    height: 50px;
+                    width: 26px;
+                    padding: 0px 10px;
+                }
+            }
+
+            .headerTitle {
+
+                h1,
+                h4 {
+                    margin: 0px;
+                    color: $secondaryColor;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+
+        .gridContainer {
+            display: grid;
+            justify-content: space-evenly;
+            text-align: center !important;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            overflow-x: hidden;
+            padding: 20px 50px;
+
+            .grid {
+                margin: 10px;
+                transition: all .6s ease-in-out;
+                box-shadow: 4px 4px 10px 0 rgba($blackColor, 0.3);
+                border-radius: 10px;
+
+                img {
+                    border-radius: 10px 10px 0px 0px;
+                    width: 100%;
+                    display: block;
+                    cursor: pointer;
+                    transition: all .6s ease-in-out;
+                }
+
+                .gridDetails {
+                    background-color: $primaryColor;
+                    color: $secondaryColor;
+                    padding: 10px 0px 15px 0;
+                    border-radius: 0px 0px 10px 10px;
+                    position: relative;
+                    text-align: center;
+                    transition: all .6s ease-in-out;
+
+                    h2,
+                    p {
+                        margin: 0;
+                        padding-top: 10px;
+                    }
+
+                    p {
+                        color: $blackColor ;
+                        transition: all .6s ease-in-out;
+
+                    }
+                }
+            }
+
+            .grid:hover {
+                background-color: $secondaryColor;
+
+                img {
+                    transform: scale(1.01);
+                }
+
+                .gridDetails {
+                    background-color: $secondaryColor;
+                    color: $whiteColor;
+
+                    p {
+                        color: $whiteColor;
+                    }
+                }
+            }
+        }
+
+        pagination-controls {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+
+//Responsiveness------------------------------------------------------------------------>>>>>>>>>>>>>>>>>
+@media only screen and (min-width:4501px) and (max-width: 6000px) {
+
+    /*25*/
+    .subContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:3100px) and (max-width: 4500px) {
+
+    /*33%*/
+    .subContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:2701px) and (max-width: 3100px) {
+
+    /*50%*/
+    .subContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:2001px) and (max-width: 2700px) {
+
+    /*67%*/
+    .subContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width: 1801px) and (max-width: 2000px) {
+
+    /*75%*/
+    .subContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:1601px) and (max-width: 1800px) {
+
+    /*80%*/
+    .subContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:1517px) and (max-width: 1600px) {
+
+    /*90%*/
+    .subContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+
+@media (max-width:1199px) {
+    .teamContainer {
+        .mainContainer {
+            .gridContainer {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .teamContainer {
+        .mainContainer {
+            .gridContainer {
+                grid-template-columns: 1fr 1fr ;
+                padding: 20px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .teamContainer {
+        .mainContainer {
+            .header {
+                padding: 10px;
+            }
+
+            .gridContainer {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+}
+
+@media (max-width:640px) {
+    .teamContainer {
+        .mainContainer {
+            padding: 10px 0px 20px 0px;
+
+            .gridContainer {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .teamContainer {
+        .whatsappContainer {
+            .whatsapp {
+                height: 50px;
+            }
+        }
+
+        .mainContainer {
+            .gridContainer {
+                grid-template-columns: 1fr;
+                padding: 0px 15px !important;
+            }
+        }
+    }
+
+}
+
+@media (max-width:375px) {
+    .teamContainer {
+        .mainContainer {
+            .gridContainer {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

@@ -1,0 +1,113 @@
+<div class="contactPopupContainer">
+    <div class="cardSubContainer">
+      <p-card class="card">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div>
+            <h3>{{ this.configData?.title }}</h3>
+          </div>
+          <div
+            class="additionalInfo"
+            *ngIf="
+              this.configData?.page == 'rent' || this.configData?.page == 'sale'
+            "
+          >
+            <div>
+              <span
+                >{{ popupLabels.propId
+                }}<span class="id">{{ this.configData?.propertyId }}</span></span
+              >
+            </div>
+            <div class="type">
+              <span
+                >{{ popupLabels.type
+                }}<span class="value">{{
+                  this.configData?.propertyType
+                }}</span></span
+              >
+            </div>
+          </div>
+  
+          <div class="additionalInfo" *ngIf="this.configData?.page == 'agent'">
+            <div>
+              <span
+                >{{ popupLabels.agent
+                }}<span class="id">{{ this.configData?.agentName }}</span></span
+              >
+            </div>
+          </div>
+          <div class="inputs">
+            <div class="column1">
+              <label>{{ popupLabels.name }}</label>
+              <input
+                type="text"
+                pInputText
+                class="p-inputtext-sm"
+                placeholder="Enter Name"
+                formControlName="name"
+              />
+              <div
+                *ngIf="
+                  form.controls['name'].invalid &&
+                  (form.controls['name'].dirty || form.controls['name'].touched)
+                "
+              ></div>
+  
+              <label>{{ popupLabels.phone }}</label>
+              <div class="phnInput">
+                <angular-phone-number-input
+                class="phoneNumber"
+                formControlName="phone"
+                [defaultCountry]="'SA'"  
+                [error]="form.get('phone')?.touched && form.get('phone')?.invalid"              
+          ></angular-phone-number-input>
+              </div>
+               <!-- <input type="number" pInputText class="p-inputtext-sm" placeholder="Enter Phone Number" formControlName="phone"><br>
+                          <div *ngIf="form.controls['phone'].invalid && (form.controls['phone'].dirty || form.controls['phone'].touched)"></div> -->
+            </div>
+  
+            <div class="column2">
+              <label>{{ popupLabels.email }}</label>
+              <input
+                type="text"
+                pInputText
+                class="p-inputtext-sm"
+                placeholder="Enter Email"
+                formControlName="email"
+              />
+              <div
+                *ngIf="
+                  form.controls['email'].invalid &&
+                  (form.controls['email'].dirty || form.controls['email'].touched)
+                "
+              ></div>
+  
+              <label>{{ popupLabels.message }}</label>
+              <input
+                pInputText
+                class="p-inputtext-sm"
+                placeholder="I'd would like to sell my property with DOM9"
+                formControlName="message"
+              />
+            </div>
+            <div class="column1">
+              <label>{{ popupLabels.contactPreference }}</label>
+              <div class="radioGroup">
+                <div *ngFor="let category of categories" class="radio">
+                  <p-radioButton
+                    [inputId]="category.key"
+                    [value]="category.key"
+                    formControlName="selectedCategory"
+                  ></p-radioButton>
+                  <label [for]="category.key">{{ category.name }}</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn">
+            <p-button type="submit">{{ popupLabels.buttonLabel }}</p-button>
+          </div>
+        </form>
+      </p-card>
+    </div>
+  </div>
+  

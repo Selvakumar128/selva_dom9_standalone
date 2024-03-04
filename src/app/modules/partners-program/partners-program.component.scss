@@ -1,0 +1,401 @@
+@import '../../../assets/theme/theme-variable.scss';
+
+
+.joinTeamContainer {
+    overflow: hidden;
+
+    .whatsappContainer {
+        float: right;
+
+        .whatsapp {
+            position: fixed;
+            cursor: pointer;
+            height: 70px;
+            bottom: 0%;
+            right: 15px;
+            z-index: 99999999;
+        }
+    }
+
+    //Slider starts--------------------------------------------------------->
+    .sliderContainer {
+        position: relative;
+
+        .sliderImage {
+            display: flex;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .sliderText {
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 10%;
+
+            h1 {
+                color: $whiteColor;
+                font-size: $sz-36-font;
+            }
+        }
+    }
+
+    //Content starts--------------------------------------------------------->
+    .mainContainer {
+        background-color: $primaryColor;
+    }
+
+    .contentContainer {
+        background-color: $primaryColor;
+        padding: 50px;
+
+        .header {
+            display: flex;
+            padding: 0px;
+
+            .headerImg {
+                img {
+                    height: 50px;
+                    width: 26px;
+                    padding: 0px 10px;
+                }
+            }
+
+            .headerTitle {
+
+                h1,
+                h4 {
+                    margin: 0px;
+                    color: $secondaryColor;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+
+        .joinTeamContent {
+            display: flex;
+            justify-content: space-between;
+
+            .contImg {
+                position: relative;
+                padding: 20px;
+
+                img {
+                    width: 100%;
+                    position: relative;
+                    object-fit: cover;
+                    border-radius: 20px;
+                }
+
+                .card {
+                    position: absolute;
+                    transform: translate(10px, 10px);
+                    right: -30px;
+                    bottom: -40px;
+                    width: 45%;
+                    margin-bottom: 40px;
+                    box-shadow: 0px 2px 5px 2px $opaqueBoxshadow;
+                    border-radius: 10px;
+                }
+
+                .cardContent {
+                    .cardHead {
+                        h3 {
+                            margin: 0px;
+                            color: $primaryColor;
+                            letter-spacing: 1px;
+                        }
+                    }
+
+                    .cardDetails {
+                        p {
+                            margin: 0px;
+                            font-size: $sz-16-font;
+                            padding: 5px 8px;
+                            color: $whiteColor;
+                            font-family: $bold-font;
+                            letter-spacing: 1px;
+                            text-align: justify;
+                        }
+                    }
+                }
+            }
+
+            .contText {
+                padding: 10px 10px;
+                width: 60%;
+
+                h3 {
+                    letter-spacing: 1px;
+                    color: $secondaryColor;
+                    padding-bottom: 10px;
+                    font-size: $sz-22-font;
+                    line-height: 25px;
+                }
+
+                p {
+                    padding-bottom: 10px;
+                    line-height: 26px;
+                    font-weight: 500;
+                    font-size: $sz-18-font;
+                    color: $blackColor;
+                    text-align: justify;
+                }
+
+                .btn {
+                    position: relative;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    padding: 5px 0px;
+                }
+            }
+        }
+    }
+}
+
+::ng-deep {
+    .joinTeamContainer {
+        .p-card {
+            background-color: $secondaryColor;
+            border-radius: 10px;
+            box-shadow: none !important;
+            font-family: $regular-font;
+        }
+
+        .p-card .p-card-content {
+            padding: 5px;
+        }
+
+        .p-button {
+            font-family: $regular-font;
+            background-color: $secondaryColor;
+            border: 1px solid transparent;
+            color: $primaryColor;
+            height: 40px;
+            border-radius: 10px;
+            padding: 5px 25px;
+            transition: all .6s ease-in-out;
+        }
+
+        .p-button:focus {
+            box-shadow: none;
+        }
+
+        .p-button:enabled:hover {
+            background-color: $hoverBrown;
+            border: 1px solid transparent;
+            transition: all .6s ease-in-out;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+            transition-property: all;
+        }
+
+        .p-button:enabled:active {
+            background-color: $hoverBrown;
+            border: 1px solid transparent;
+        }
+    }
+}
+
+
+
+
+//Responsiveness Starts--------------------------------------------------------------------->>>>
+@media only screen and (min-width:4501px) and (max-width: 6000px) {
+
+    /*25*/
+    .contentContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:3100px) and (max-width: 4500px) {
+
+    /*33%*/
+    .contentContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:2701px) and (max-width: 3100px) {
+
+    /*50%*/
+    .contentContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:2001px) and (max-width: 2700px) {
+
+    /*67%*/
+    .contentContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width: 1801px) and (max-width: 2000px) {
+
+    /*75%*/
+    .contentContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:1601px) and (max-width: 1800px) {
+
+    /*80%*/
+    .contentContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:1517px) and (max-width: 1600px) {
+
+    /*90%*/
+    .contentContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width:1199px) {
+    .sliderContainer {
+        .sliderImage {
+            img {
+                height: 350px;
+                object-fit: cover;
+            }
+        }
+
+    }
+}
+
+@media (min-width:1066px) {}
+
+@media (max-width:1065px) {}
+
+@media (max-width: 991px) {
+    .contentContainer {
+        .joinTeamContent {
+            display: flex !important;
+            flex-direction: column-reverse; /* Reversing the order for smaller screens */
+
+            .contImg {
+                display: block;
+                padding: 0px !important;
+                // height: 420px;
+
+                .card {
+                    transform: translate(0px, 0px) !important;
+                    right: 0px !important;
+                    bottom: 0px !important;
+                    width: 100% !important;
+                    margin: 0px !important;
+                }
+
+                img {
+                    // height: 420px;
+                    width: 100% !important;
+                }
+            }
+
+            .contText {
+                padding: 0px !important;
+                margin: 0px !important;
+                width: 100% !important;
+
+                .btn {
+                    justify-content: center !important;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .contentContainer {
+        padding: 25px !important;
+
+        .header {
+            padding: 20px 0px !important;
+        }
+    }
+}
+
+@media (max-width:640px) {}
+
+@media (max-width:480px) {
+    .joinTeamContainer {
+        .whatsappContainer {
+            .whatsapp {
+                height: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width:375px) {
+    ::ngdeep {
+        .joinTeamContent {
+            .contImg {
+                .p-card .p-card-body {
+                    padding: 10px !important;
+                }
+            }
+        }
+    }
+
+}

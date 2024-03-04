@@ -1,0 +1,228 @@
+<div class="offPlanPropertyContainer">
+    <div class="whatsappContainer" *ngFor="let wp of whatsapp">
+      <a href="https://web.whatsapp.com"
+        ><img class="whatsapp" src="{{ wp.img }}"
+      /></a>
+    
+    </div>
+    <div class="feedbackContainer"> 
+      <p-button (click)="showFeedback('', 'add')" class="feedbackBtn">Feedback</p-button>
+    </div>
+  
+  
+  
+    
+  
+  
+    <!-- NAVIGATION STARTS -->
+    <!-- <app-navbar></app-navbar> -->
+  
+    <!--SLIDER STARTS -->
+    <!-- <div class="sliderContainer">
+      <div class="card">
+      <p-carousel [value]="imgCollection" [numVisible]="itemsPerSlide" [circular]="true" [autoplayInterval]="interval" [showIndicators]="false">
+          <ng-template let-image pTemplate="item">
+            <img [src]="image.thumbImage" [alt]="image.alt" />
+          </ng-template>
+      </p-carousel>
+      </div>
+    </div> -->
+  
+  
+  
+    <div class="sliderContainer">
+      <div class="card">
+        <p-carousel [value]="imgCollection" [numVisible]="itemsPerSlide" [circular]="true" [autoplayInterval]="interval" [showIndicators]="false">
+          <ng-template let-image pTemplate="item">
+            <img [src]="image.thumbImage" [alt]="image.alt" (click)="showPopup(image)" />
+          </ng-template>
+        </p-carousel>
+      </div>
+    </div>
+    
+  
+    <!--CONTENT STARTS -->
+    <div class="contentContainer">
+      <div class="offPlanMainContent">
+        <!-- SECTION - 1 -->
+        <div class="contentDetails" *ngFor="let d of data">
+          <div class="para">
+            <h1>{{ d.header }}</h1>
+            <p class="para1">{{ d.para1 }}</p>
+            <div class="location"><img class="pic2" src="{{ d.location }}" />{{d.header2}}</div>
+            <p class="para2">{{ d.para2 }} <span>({{d.year1}})</span></p>
+            <p class="para2">{{ d.para3 }} <span>({{d.year2}})</span></p>
+            
+          </div>
+          <div class="button">
+            <p-button (click)="sharePopup('', 'add')" class="btnShare" > <img src="../../assets/icons/shareButton.svg" alt="" ></p-button>
+            <p-button (click)="show('', 'add')" class="btn">{{ d.btn }}</p-button>
+          </div>
+        </div>
+  
+        <!-- SECTION - 2 -->
+        <div class="cont-2" *ngFor="let d1 of data1">
+          <p-card class="card-2">
+            <p-panel header="DETAILS AND FEATURES" >
+              <div class="cardCont">
+                <div class="row row-1">
+                  <span class="left"
+                    >{{ d1.list2 }}&nbsp;<span class="right">{{
+                      d1.type
+                    }}</span></span
+                  >
+                  <span class="left"
+                    >{{ d1.list3 }}&nbsp;<span class="right">{{
+                      d1.bedroom
+                    }}</span></span
+                  >
+                  <span class="left"
+                    >{{ d1.list4 }}&nbsp;<span class="right">{{
+                      d1.floor
+                    }}</span></span
+                  >
+                </div>
+                <div class="row row-3">
+                  <span class="left"
+                    >{{ d1.list7 }}&nbsp;<span class="right">{{
+                      d1.amenties
+                    }}</span></span
+                  >
+                </div>
+              </div>
+            </p-panel>
+          </p-card>
+        </div>
+  
+        <!-- SECTION - 3 -->
+        <div class="cont3">
+          <p-card  class="card3"> 
+              <p-panel header="DESCRIPTION" [toggleable]="true">
+              <div class="cardCont"  *ngFor="let l2 of list2">
+                  <div class="para">
+                  <p>{{l2.para1}}</p>
+                  </div>
+                  <div  class="para">
+                  <p>{{l2.para2}}</p>
+                  </div>
+                  <div  class="para">
+                  <p>{{l2.para3}}</p>
+                  </div>
+  
+                  <div class="readmore" [ngClass]="{'limitTextHeight': isReadMore}">
+                          <div class="para">
+                              <p>{{l2.para4}}</p>
+                              </div>
+                              <div  class="para">
+                              <p>{{l2.para5}}</p>
+                              </div>
+                              <div  class="para">
+                              <p>{{l2.para6}}</p>
+                              </div>
+                  </div>
+                  <div class="expand" (click)="showText()">
+                      {{ isReadMore ? 'Read More': 'Read Less' }}
+                  </div>
+              </div>
+          </p-panel>
+          </p-card>
+      </div>
+  
+  
+      <!----------------------------------------------CONTENT-5-------------------------------------------------->
+      <div class="cont5">
+        <p-card class="card5">
+            
+            <p-panel header="FLOOR PLAN" [toggleable]="true">
+            <div class="cardCont"  *ngFor="let l3 of list3">
+                <div class="floor">
+                     <div class="topCont">
+                      <div class="header">
+                            <p-panel class="twoBedRoom" header="Two Bedroom Flat" >
+                                <p>{{l3.para1}}</p>
+                            </p-panel>   
+                      </div>
+                        <img src="{{l3.img}}">
+                     </div>       
+                </div>
+                <div class="floor">
+                  <div class="topCont">
+                   <div class="header">
+                         <p-panel class="twoBedRoom" header="Three Bedroom Flat" >
+                             <p>{{l3.para1}}</p>
+                         </p-panel>   
+                   </div>
+                     <!-- <img src="{{l3.img}}"> -->
+                  </div>       
+             </div>
+            </div>
+        </p-panel>
+        </p-card> 
+    </div>
+  
+  <!-- Gallery Container -->
+  
+  <div class="cont6">
+    <p-card class="card6">
+      <p-panel header="GALLERY">
+    <div class="contentOneContainer" *ngFor="let c1 of content1">
+      <div class="contentOneSubContainer">
+  
+        <div class="headerCont">
+          <div class="card1">
+            <img class="pic1" src="{{ c1.img1 }}" />
+          </div>
+  
+          <div class="colm-2">
+            <div class="card2">
+              <img class="pic2" src="{{ c1.img2 }}" />
+            </div>
+            <div class="card3">
+              <img class="pic3" src="{{ c1.img3 }}" />
+            </div>
+          </div>
+  
+         
+  
+          <div class="colm-3">
+            <div class="card4">
+              <img class="pic4" src="{{ c1.img4 }}" />
+            </div>
+            <div class="card5">
+              <img class="pic5" src="{{ c1.img5 }}" />
+            </div>
+          </div>
+  
+        </div>
+      </div>
+      <p-panel >
+        <p class="morePhotos">MORE PHOTOS</p>
+    </p-panel>
+    </div>
+  </p-panel>
+  </p-card> 
+  </div>
+  <!-- Youtube section -->
+    <div class="officeSubcontent">
+      <div class="card-1">
+        <iframe
+          class="pic-1"
+          src="https://www.youtube.com/embed/7Qivx2om0MM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+      </div>
+  
+  
+      
+      </div>
+    </div>
+  
+    <!-- FOOTER STARTS -->
+    <!-- <app-footer></app-footer> -->
+  </div>
+  

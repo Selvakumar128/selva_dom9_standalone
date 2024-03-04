@@ -1,0 +1,16 @@
+
+<div class="popup-container" >
+    <div class="sliderContainers">
+      <div class="cards">
+        <p-carousel [value]="imgCollection" [numVisible]="itemsPerSlide" [circular]="true" [autoplayInterval]="interval" [showIndicators]="false">
+          <ng-template let-image pTemplate="item">
+            <img [src]="image.thumbImage" [alt]="image.alt" />
+          </ng-template>
+        </p-carousel>
+      </div>
+    </div>
+
+  </div>
+  
+  
+  

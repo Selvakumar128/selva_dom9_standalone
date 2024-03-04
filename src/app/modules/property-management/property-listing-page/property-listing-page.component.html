@@ -1,0 +1,109 @@
+<div class="propertyListingContainer">
+    <div class="whatsappContainer" *ngFor="let wp of whatsapp">
+      <a href="https://web.whatsapp.com"
+        ><img class="whatsapp" src="{{ wp.img }}"
+      /></a>
+    </div>
+  
+    <div class="sliderContainer">
+      <div class="sliderImage">
+        <img class="sliderBgImg" src="{{ imageHeader[this.page].img }}" />
+      </div>
+      <div class="sliderText">
+        <h1>{{ imageHeader[this.page].header }}</h1>
+      </div>
+    </div>
+  
+    <div class="searchContainer">
+      <div class="app-search">
+        <app-search />
+      </div>
+    </div>
+  
+    <div class="mainContainer">
+      <div class="contentContainer">
+        <div class="sectionHeader">
+          <h1>
+            <img
+              class="line"
+              src="assets/images/headerLeftBorder.svg"
+            />Properties
+          </h1>
+          <div class="dropdownContainer">
+            <p-dropdown
+              class="sortBy"
+              [options]="prices"
+              [(ngModel)]="priceList"
+              optionLabel="rate"
+              placeholder="SORT BY"
+              appendTo="body"
+            ></p-dropdown>
+          </div>
+        </div>
+  
+        <div class="dataviewContainer">
+          <div class="headerDropdown"></div>
+        </div>
+  
+        <div class="gridContainer">
+          <div
+            class="card"
+            *ngFor="
+              let data of propertiesList
+                | paginate : { itemsPerPage: 5, currentPage: p }
+            "
+          >
+            <!-- <div class="btn1">
+              <button pButton>{{ data.propertyCategory }}</button>
+            </div> -->
+            <div class="imgContainer">
+              <img class="cardImage" src="{{ data.propertyImg }}" />
+            </div>
+            <div class="subHead" *ngIf="data.newLaunch">
+              <p>{{ data.newLaunch }}</p>
+            </div>
+            <div class="cardContent">
+              <div class="details1">
+                <div class="header">
+                  <h3 class="propertyName">{{ data.community }}</h3>
+                  <h3 class="price">AED {{ data.price }}</h3>
+                </div>
+                <div class="btn2">
+                  <button pButton>MORE DETAILS</button>
+                </div>
+              </div>
+              <div class="details2">
+                <div class="cardItems1">
+                  <div class="flex">
+                    <img src="assets/icons/villaIcon.svg" />
+                    <p>{{ data.propertyType }}</p>
+                  </div>
+                  <div class="flex">
+                    <img class="locationImg" src="assets/icons/location.svg" />
+                    <p>{{ data.sub_community }}</p>
+                  </div>
+                </div>
+                <div class="cardItems2">
+                  <div class="flex">
+                    <img class="bedroomImg" src="assets/icons/bedroomIcon.svg" />
+                    <p>{{ data.bedrooms }}</p>
+                  </div>
+                  <div class="flex">
+                    <img src="assets/icons/sqftIcon.svg" />
+                    <p>{{ data.size }} SQFT</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <pagination-controls
+          [previousLabel]="''"
+          [nextLabel]="''"
+          (pageChange)="p = $event"
+          [responsive]="true"
+        ></pagination-controls>
+      </div>
+    </div>
+  </div>
+  

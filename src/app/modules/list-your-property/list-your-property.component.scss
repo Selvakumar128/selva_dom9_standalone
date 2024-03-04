@@ -1,0 +1,814 @@
+@import '../../../assets/theme/theme-variable.scss';
+
+
+
+
+input.ng-invalid.ng-touched {
+    border: 1px solid $validateColor;
+}
+
+    // styles added for new phone number package by Selva on 01/03/2023
+input.p-inputtext-sm.ng-untouched.ng-pristine.ng-invalid {
+    /* width: 100%; */
+    font-family: "helvetica";
+    width: 100%;
+    height: 40px;
+    border: 1px solid $border;
+    margin: 10px 0px;
+    padding: 0px 15px;
+    border-radius: 5px;
+    position: relative;
+    color: $blackColor;
+}
+input.ng-invalid.ng-touched {
+    border: 1px solid $error;
+    font-family: "helvetica";
+    width: 100%;
+    height: 40px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    position: relative;
+    color: $blackColor;
+}
+::ng-deep{
+    .wrap.flex.align-center.border {
+        background-color: $dropdownbg;
+        border: 1px solid $border;
+        padding: 0 0 0 8px;
+        width: 104%;
+        height: 40px;
+    }
+    input.input-box.text {
+        color: $blackColor;
+        height: 100%;
+    }   
+    span.text.ml-5 {
+        color: $blackColor;
+        margin-right: 10px;
+    }
+    .error{
+        border: 1px solid $error !important;
+    }
+
+}
+
+
+
+.sellContainer {
+    overflow: hidden;
+
+    .whatsappContainer {
+        float: right;
+
+        .whatsapp {
+            position: fixed;
+            cursor: pointer;
+            height: 70px;
+            bottom: 0%;
+            right: 15px;
+            z-index: 99999999;
+        }
+    }
+
+    //Slider starts--------------------------------------------------------->
+    .sliderContainer {
+        position: relative;
+
+        .sliderImage {
+            display: flex;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .sliderText {
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 10%;
+
+            h1 {
+                color: $whiteColor;
+                font-size: $sz-36-font;
+                line-height: 50px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    //Card starts--------------------------------------------------------->
+    .cardContainer {
+        background-color: $primaryColor;
+        position: relative;
+
+        //  max-height: 300px;
+        .card {
+            form {
+
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+            }
+
+            h3 {
+                text-align: center;
+                line-height: 30px;
+                margin: 0px 40px;
+                padding: 5px 40px;
+            }
+// added by selva on 01/03/24
+            .inputs {
+                display: grid;
+                flex-wrap: wrap;
+                padding: 15px 0px;
+                gap: 20px;
+                grid-template-columns: 1fr 1fr;
+
+                .column1 {
+                    width: auto;
+                    // padding-left: 15px;
+
+                    .phnInput {
+
+                        width: 95%;
+                        background-color: $whiteColor;
+                        margin: 10px 0px;
+                        border-radius: 10px;
+                        position: relative;
+                        color: $ph;
+
+                    }
+                }
+
+                .column2 {
+                    width: 100%;
+                }
+            }
+
+            .radioGroup {
+                margin-top: 10px;
+                display: flex;
+                column-gap: 40px;
+
+                .radio {
+                    display: flex;
+                    column-gap: 20px;
+                    align-items: center;
+
+
+                }
+            }
+
+            .btn {
+                text-align: center;
+            }
+        }
+    }
+
+    //Content starts--------------------------------------------------------->
+    .contentContainer {
+        background-color: $primaryColor;
+
+        .header {
+            display: flex;
+            padding: 30px 0px 0px 85px;
+
+            .headerImg {
+                width: 20px;
+                width: 26px;
+
+                img {
+                    height: 50px;
+                    width: 5px;
+                }
+            }
+
+            .headerTitle {
+                color: $secondaryColor;
+
+                h1,
+                h4 {
+                    margin: 0px;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .headerSection {
+                display: flex;
+            }
+        }
+
+        .headerCont {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 50px;
+
+            .card-1,
+            .card-2,
+            .card-3 {
+                border-radius: 15px;
+                transition: all .5s ease-in-out;
+                border: 1px solid $secondaryColor;
+
+                img {
+                    width: 25%;
+                    height: 80px;
+                    object-fit: contain;
+                    border: 1px solid $secondaryColor;
+                    border-radius: 10px;
+                    padding: 10px;
+                    background-color: $secondaryColor;
+                    transition: all .5s ease-in-out;
+                }
+
+                h3 {
+                    letter-spacing: 1px;
+                    padding: 10px;
+                }
+
+                p {
+                    padding: 10px;
+                    line-height: 25px;
+                }
+            }
+
+            .card-1:hover,
+            .card-2:hover,
+            .card-3:hover {
+                cursor: pointer;
+                box-shadow: 0px 2px 10px 2px $secondaryColor;
+                transition: all .6s ease-in-out;
+                transition-duration: 0.5s;
+                transition-timing-function: ease-in-out;
+                transition-delay: 0s;
+                transition-property: all;
+
+                // img {
+                //     background-color: $darkbrown;
+                //     transition: all .6s ease-in-out;
+                //     transition-duration: 0.5s;
+                //     transition-timing-function: ease-in-out;
+                //     transition-delay: 0s;
+                //     transition-property: all;
+                // }
+            }
+        }
+    }
+}
+
+
+
+
+// placeholder Color change 
+
+.inputs input::placeholder {
+    color: $placeholder;
+    font-size: $sz-13-font;
+    font-family: $regular-font;
+}
+
+.inputs label {
+    color: $blackColor;
+    font-family: $regular-font;
+}
+
+
+::ng-deep {
+    .sellContainer {
+        .cardContainer {
+            .card {
+                .p-card {
+                    font-family: $regular-font;
+                    background-color: $whiteColor;
+                    color: $blackColor;
+                    width: 50%;
+                    padding: 20px 30px;
+                    position: relative;
+                    transform: translateY(-25%);
+                    top: 50%;
+                    left: 25%;
+                }
+
+                .p-card .p-card-content {
+                    padding: 0 !important;
+                }
+
+                .p-card .p-card-body {
+                    padding: 0 !important;
+                }
+
+                .p-inputtext.p-inputtext-sm {
+                    width: 95%;
+                    background-color: $whiteColor;
+                    margin: 10px 0px;
+                    border-radius: 10px;
+                    position: relative;
+                    color: $ph;
+                }
+
+                .p-button {
+                    font-family: $regular-font;
+                    font-size: $sz-18-font;
+                    background-color: $secondaryColor;
+                    border: 1px solid transparent;
+                    color: $primaryColor;
+                    border-radius: 8px;
+                    padding: 8px 25px;
+                    position: relative;
+                    text-align: center;
+                    transition: all .6s ease-in-out;
+                }
+
+                .p-button:focus {
+                    box-shadow: none;
+                }
+
+                .p-button:enabled:hover {
+                    background-color: $hoverBrown;
+                    color: $whiteColor;
+                    border: 1px solid $hoverBrown;
+                    transition: all .6s ease-in-out;
+                    transition-duration: 0.5s;
+                    transition-timing-function: ease-in-out;
+                    transition-delay: 0s;
+                    transition-property: all;
+                }
+
+                .p-button:enabled:active {
+                    background-color: $hoverBrown;
+                    border: 1px solid $secondaryColor;
+                }
+
+                .p-inputtext:enabled:focus {
+                    border: 1px solid $hoverBrown;
+                    box-shadow: 0 0 0 $secondaryColor;
+                }
+
+                .p-inputtext:enabled:hover {
+                    border-color: $inputBorder;
+                }
+
+                .iti--allow-dropdown input,
+                .iti--allow-dropdown input[type=text],
+                .iti--allow-dropdown input[type=tel],
+                .iti--separate-dial-code input,
+                .iti--separate-dial-code input[type=text],
+                .iti--separate-dial-code input[type=tel] {
+                    border-radius: 10px;
+                    padding: 11px 11px 11px 55px;
+                    width: 100%;
+                    border: 1px solid $inputBorder;
+                }
+
+                .iti--allow-dropdown input:focus-visible {
+                    outline: none;
+                }
+
+                .contactContainer .iti__selected-flag.dropdown-toggle:hover {
+                    background-color: $dropdownbg;
+                }
+
+                .iti__selected-flag.dropdown-toggle {
+                    background-color: $dropdownbg;
+                    border-radius: 10px 0px 0px 10px;
+                }
+
+                .iti.iti--allow-dropdown {
+                    width: 100%;
+                }
+
+                .iti--allow-dropdown input::placeholder {
+                    color: $placeholder;
+                    font-size: $sz-13-font;
+                    font-family: $regular-font;
+                }
+
+                .dropdown-menu.show {
+                    width: 280px;
+                }
+            }
+
+            .radioGroup {
+                .radio {
+
+
+                    .p-radiobutton .p-radiobutton-box.p-highlight {
+                        border-color: $blackColor !important;
+                        background: #fff !important;
+                    }
+
+                    .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight) {
+                        border-color: $blackColor !important;
+                    }
+
+                    .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+                        border-color: $blackColor !important;
+                    }
+
+                    .p-radiobutton .p-radiobutton-box:not(.p-disabled).p-focus {
+                        box-shadow: none;
+                    }
+
+                    .p-radiobutton-box.p-highlight .p-radiobutton-icon {
+                        background-color: $secondaryColor;
+                    }
+                }
+            }
+
+            .custom {
+                border-color: $error !important;
+
+            }
+        }
+
+        .contentContainer {
+            .headerCont {
+
+                .card-1,
+                .card-2,
+                .card-3 {
+                    width: 30%;
+
+                    .p-card {
+                        background-color: $primaryShade1;
+                        height: 380px;
+                        color: $blackColor;
+                        text-align: center;
+                        box-shadow: none;
+                        border-radius: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.phnInput {
+    width: 100%;
+}
+
+
+
+
+//RESPONSIVENESS--------------------------------------------------------------->>>>>>>>>>>>>
+@media only screen and (min-width:4501px) and (max-width: 6000px) {
+
+    /*25*/
+    .cardSubContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .contentSubContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:3100px) and (max-width: 4500px) {
+
+    /*33%*/
+    .cardSubContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .contentSubContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:2701px) and (max-width: 3100px) {
+
+    /*50%*/
+    .cardSubContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .contentSubContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:2001px) and (max-width: 2700px) {
+
+    /*67%*/
+    .cardSubContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .contentSubContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width: 1801px) and (max-width: 2000px) {
+
+    /*75%*/
+    .cardSubContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .contentSubContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:1601px) and (max-width: 1800px) {
+
+    /*80%*/
+    .cardSubContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .contentSubContainer {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:1517px) and (max-width: 1600px) {
+    /*90%*/
+
+}
+
+
+@media (max-width:1199px) {
+    .sellContainer {
+        .cardContainer {
+            padding: 15px 5px;
+
+            .card {
+                h3 {
+                    margin: 10px;
+                    padding: 10px;
+                }
+
+                .inputs {
+                    padding: 15px 20px 25px 20px;
+
+                    // .column1 {
+                    //     width: 100%;
+                    // }
+
+                    // .column2 {
+                    //     width: 100%;
+                    //     // padding-left: 15px;
+                    // }
+                }
+            }
+
+            ::ng-deep {
+                .card .p-card {
+                    position: unset;
+                    margin: 0 auto;
+                    width: 70% !important;
+                    transform: translateY(0%) !important;
+                    // top: 50% !important;
+                    // left: 18% !important;
+                }
+            }
+        }
+    }
+
+    // ::ng-deep {
+    //     .cardContainer .card .p-inputtext.p-inputtext-sm {
+    //         width: 100% !important;
+    //     }
+    // }
+
+    //     .cardContainer .card .p-card {
+    //         width: 65% !important;
+    //         transform: translateY(0%) !important;
+    //         top: 50% !important;
+    //         left: 18% !important;
+    //     }
+
+    //     .iti--allow-dropdown input {
+    //         width: 105% !important;
+    //     }
+    // }
+
+    .contentContainer {
+        .headerCont {
+            img {
+                width: auto !important;
+            }
+
+            ::ng-deep {
+                .p-card {
+                    height: auto !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+
+    .sellContainer {
+        .cardContainer {
+            .card {
+                .p-card {
+                    padding: 20px !important;
+
+                }
+
+                .inputs {
+
+                    padding: 5px 0 25px 0 !important;
+                }
+            }
+
+
+            ::ng-deep {
+                .card .p-card {
+                    min-width: 460px !important;
+                    // top: 50% !important;
+                    // left: 18% !important;
+                }
+            }
+        }
+    }
+
+    .sliderContainer {
+        .sliderImage {
+            img {
+                height: 300px !important;
+            }
+        }
+    }
+
+    .contentContainer {
+        .headerCont {
+            display: block !important;
+            padding: 10px 25px !important;
+
+            .card-1,
+            .card-2,
+            .card-3 {
+                width: 100% !important;
+                margin: 15px 0px;
+
+                //  padding:15px ;
+                .cardContent {
+                    p {
+                        padding: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:640px) {
+    .contentContainer {
+        .header {
+            padding: 30px 0px 0px 25px !important;
+        }
+    }
+
+    // ::ng-deep {
+    //     cardContainer .card .p-card h3 {
+    //         margin: 0px !important;
+    //         padding: 0px !important;
+    //     }
+
+    //     .cardContainer .card .p-card {
+    //         width: 90% !important;
+    //         transform: translateY(0%) !important;
+    //         top: 50% !important;
+    //         left: 5% !important;
+    //     }
+    // }
+}
+
+@media (max-width:480px) {
+    .sellContainer {
+        .whatsappContainer {
+            .whatsapp {
+                height: 50px;
+            }
+        }
+
+        .cardContainer {
+            .card {
+                h3 {
+                    margin: 0px;
+                    padding: 0px;
+                }
+
+                .inputs {
+
+                    padding: 5px 0 25px 0 !important;
+
+                    .column1 {
+                        width: 100%;
+                    }
+
+                    .column2 {
+                        width: 100%;
+                    }
+                }
+            }
+
+
+            ::ng-deep {
+                .card .p-card {
+                    padding: 15px !important;
+                    min-width: 95% !important;
+                    max-width: 100% !important;
+                    // top: 50% !important;
+                    // left: 18% !important;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width:375px) {}

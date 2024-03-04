@@ -1,0 +1,550 @@
+@import '../../../../assets/theme/theme-variable.scss';
+
+.offPlanProjectsContainer {
+    overflow: hidden;
+
+    .whatsappContainer {
+        float: right;
+
+        .whatsapp {
+            position: fixed;
+            cursor: pointer;
+            height: 70px;
+            bottom: 0%;
+            right: 15px;
+            z-index: 99999999;
+        }
+    }
+
+    .sliderContainer {
+        position: relative;
+
+        .sliderImage {
+            display: flex;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .sliderText {
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 10%;
+
+            h1 {
+                color: $whiteColor;
+                font-size: $sz-36-font;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    .projectSearch {
+        background-color: $primaryColor;
+        max-height: 100px;
+
+        .searchContainer {
+            background-color: $whiteColor;
+            position: relative;
+            width: 50%;
+            padding: 30px;
+            margin: 0 auto;
+            transform: translateY(-50%);
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 20px;
+
+            .dropdownFlex {
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+            }
+
+            label {
+                color: $hoverBrown;
+            }
+
+            .row1 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                flex-wrap: wrap;
+                width: 100%;
+
+                .dropdown1 {
+                    width: 64%;
+                }
+
+                .dropdown2 {
+                    width: 34%;
+                }
+
+            }
+
+            .row2 {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                gap: 10px;
+                flex-wrap: wrap;
+                width: 100%;
+
+                .dropdowns {
+                    // width: 64%;
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 20px;
+                }
+
+                .btn {
+                    // width: 34%;
+                    text-align: end;
+                }
+            }
+        }
+    }
+
+    // .projectSearch {
+    //     background-color: $primaryColor;
+    //     max-height: 100px;
+
+    //     .searchContainer {
+    //         background-color: $whiteColor;
+    //         position: relative;
+    //         width: 90%;
+    //         max-width: 600px;
+    //         margin: auto;
+    //         padding: 20px;
+    //         border-radius: 10px;
+    //         display: flex;
+    //         flex-wrap: wrap;
+    //         gap: 20px;
+
+    //         .row1,
+    //         .row2 {
+    //             width: 100%;
+    //             display: flex;
+    //             align-items: center;
+    //             gap: 20px;
+    //             flex-wrap: wrap;
+
+    //             .dropdown1,
+    //             .dropdown2 {
+    //                 width: 100%;
+    //             }
+
+    //             .dropdowns {
+    //                 width: 100%;
+    //                 gap: 20px;
+    //             }
+
+    //             .btn {
+    //                 width: 100%;
+    //                 text-align: center;
+    //                 margin-top: 25px;
+    //             }
+    //         }
+    //     }
+    // }
+
+
+    //CONTENT starts--------------------------------------------------------->
+    .offPlanContainer {
+        background-color: $primaryColor;
+        padding: 50px 50px 20px 50px;
+
+        .header {
+            margin: 20px 50px;
+
+            h1 {
+                margin: 0px;
+                color: $blackColor;
+                letter-spacing: 1px;
+            }
+
+            .line {
+                height: 45px;
+                width: 5px;
+                margin-right: 10px;
+                position: relative;
+                top: 10px;
+            }
+        }
+
+        .offPlanContent {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+
+            .offPlanImg {
+                width: 60%;
+                height: 400px;
+                margin: 30px 50px;
+                overflow: hidden;
+                border-radius: 10px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    box-shadow: 0px 2px 5px 2px rgba(44, 44, 44, 0.562);
+                    transition: all .5s ease-in-out;
+                }
+
+                img:hover {
+                    transform: scale(1.1);
+                    transition: all .6s ease-in-out;
+                    transition-duration: 0.5s;
+                    transition-timing-function: ease-in-out;
+                    transition-delay: 0s;
+                    transition-property: all;
+                }
+            }
+
+            .offPlanDetails {
+                width: 40%;
+                padding: 30px 0;
+
+                // padding-top:5px;
+                h1 {
+                    color: $blackColor;
+                    letter-spacing: 1px;
+                    margin: 0px 57px 0px 0px;
+                }
+
+                .para {
+                    p {
+                        color: $secondaryColor;
+                        margin: 15px 0px;
+                        line-height: 25px;
+                        font-size: $sz-18-font;
+                    }
+
+                    .community {
+                        font-family: $bold-font;
+                        color: $blackColor;
+                    }
+                }
+
+                .details {
+                    color: $blackColor;
+                    font-size: $sz-18-font;
+                    margin-bottom: 25px;
+
+                    p {
+                        margin: 14px 0px;
+
+                        .highlight {
+                            font-family: $bold-font;
+                            color: $secondaryColor
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        .pagination {
+            text-align: center;
+        }
+
+
+    }
+
+    .mapContainer {
+        background-color: $primaryColor;
+        padding: 15px;
+        height: 400px;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+::ng-deep {
+    .offPlanProjectsContainer {
+        .p-button {
+            font-family: $regular-font;
+            background-color: $secondaryColor;
+            border: 1px solid transparent;
+            color: $primaryColor;
+            height: 35px;
+            border-radius: 8px;
+            padding: 10px 15px;
+            align-items: center;
+            transition: all .6s ease-in-out;
+        }
+
+        .p-button:focus {
+            box-shadow: none;
+        }
+
+        .p-button:enabled:hover {
+            background-color: $hoverBrown;
+            color: $whiteColor;
+            border: 1px solid transparent;
+            transition: all .6s ease-in-out;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+            transition-property: all;
+        }
+
+        .p-button:enabled:active {
+            background-color: $hoverBrown;
+            color: $whiteColor;
+            border: 1px solid transparent;
+        }
+    }
+}
+
+
+
+
+//Responsiveness Starts--------------------------------------------------------------------->>>>
+@media only screen and (min-width:4501px) and (max-width: 6000px) {
+
+    /*25*/
+    .offPlanMainContent {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:3100px) and (max-width: 4500px) {
+
+    /*33%*/
+    .offPlanMainContent {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:2701px) and (max-width: 3100px) {
+
+    /*50%*/
+    .offPlanMainContent {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:2001px) and (max-width: 2700px) {
+
+    /*67%*/
+    .offPlanMainContent {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width: 1801px) and (max-width: 2000px) {
+
+    /*75%*/
+    .offPlanMainContent {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:1601px) and (max-width: 1800px) {
+
+    /*80%*/
+    .offPlanMainContent {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:1517px) and (max-width: 1600px) {
+
+    /*90%*/
+    .offPlanMainContent {
+        max-width: 1250px !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+
+@media (max-width:1199px) {}
+
+@media (min-width:1066px) {}
+
+@media (max-width:1065px) {}
+
+@media (max-width:1150px) {
+    .offPlanContainer {
+        .header {
+            margin: 10px 0px !important;
+        }
+
+        .offPlanContent {
+            display: block !important;
+        }
+
+        .offPlanImg {
+            width: 100% !important;
+            height: 300px !important;
+            margin: 30px 0px !important;
+        }
+
+        .offPlanDetails {
+            width: 100% !important;
+            padding: 0px !important;
+            padding-bottom: 30px !important;
+        }
+
+        .offPlanContent {
+            border-bottom: 1px solid $darkbrown;
+        }
+
+        .offPlanContent:nth-child(5) {
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .offPlanProjectsContainer {
+        .projectSearch {
+            max-height: unset;
+            padding-top: 30px;
+
+            .searchContainer {
+                width: 90%;
+                max-width: 600px;
+                padding: 30px 20px;
+                transform: translateY(0%);
+
+                .row1,
+                .row2 {
+                    .dropdown1 {
+                        width: 59%;
+                    }
+
+                    .dropdown2 {
+                        width: 35%;
+                    }
+
+                    .dropdowns {
+                        width: 60%;
+                        gap: 20px;
+                    }
+
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .sliderContainer {
+        .sliderImage {
+            img {
+                height: 300px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .offPlanContainer {
+        padding: 25px !important;
+
+        .offPlanImg {
+            height: 300px !important;
+        }
+    }
+}
+
+// @media (max-width:670px) {
+//     .offPlanProjectsContainer {
+//         .projectSearch {
+
+//             .searchContainer {
+
+//                 .row1,
+//                 .row2 {
+
+
+//                     .dropdowns {
+//                         align-items: flex-end;
+//                     }
+
+
+//                 }
+//             }
+//         }
+//     }
+// }
+
+@media (max-width:480px) {
+    .offPlanProjectsContainer {
+        .whatsappContainer {
+            .whatsapp {
+                height: 50px;
+            }
+        }
+    }
+
+    .offPlanContainer {
+        .offPlanImg {
+            height: 250px !important;
+        }
+    }
+}
+
+@media (max-width:375px) {}

@@ -1,0 +1,40 @@
+<div class="sharePopupContainer">
+    <div class="cardSubContainer">
+      <p-card class="card">
+        <div>
+          <h3>SHARE</h3>
+        </div>
+        <div class="content">
+          <span>{{ this.configData?.propertyName }}</span>
+          <div class="inputContainer">
+            <input
+              type="text"
+              pInputText
+              class="p-inputtext-sm"
+              #linkInput
+              readonly
+            />
+            <p-button (onClick)="copyText()">COPY</p-button>
+          </div>
+          <div class="socialIcons">
+            <a href="" target="_blank"
+              ><img src="{{ socialIcons.socialicon1 }}" alt="Social Icon 1"
+            /></a>
+            <a href="" target="_blank"
+              ><img src="{{ socialIcons.socialicon2 }}" alt="Social Icon 2"
+            /></a>
+            <a href="" target="_blank"
+              ><img src="{{ socialIcons.socialicon3 }}" alt="Social Icon 3"
+            /></a>
+            <a href="" target="_blank"
+              ><img src="{{ socialIcons.socialicon4 }}" alt="Social Icon 4"
+            /></a>
+            <a href="" target="_blank"
+              ><img src="{{ socialIcons.socialicon5 }}" alt="Social Icon 5"
+            /></a>
+          </div>
+        </div>
+      </p-card>
+    </div>
+  </div>
+  

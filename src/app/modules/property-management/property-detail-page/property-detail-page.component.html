@@ -1,0 +1,203 @@
+<div class="listPropertyContainer">
+    <div class="whatsappContainer" *ngFor="let wp of whatsapp">
+      <a href="https://web.whatsapp.com"
+        ><img class="whatsapp" src="{{ wp.img }}"
+      /></a>
+    </div>
+  
+    <!-- NAVIGATION STARTS -->
+    <!-- <app-navbar></app-navbar> -->
+  
+    <!-- SLIDER STARTS -->
+    <div class="sliderContainer" *ngFor="let sl of slider">
+      <div class="sliderImage">
+        <img class="sliderBgImg" src="{{ sl.img }}" />
+      </div>
+      <div class="sliderText">
+        <h1>{{ sl.header }}</h1>
+      </div>
+    </div>
+  
+    <div class="mainContainer" *ngFor="let data of mainData">
+      <!-- CARD STARTS -->
+      <div class="cardContainer">
+        <p-card class="propertyDetailCard">
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="inputs" *ngFor="let d of dialog">
+              <div class="column1">
+                <div class="row1">
+                  <label>{{ d.label1 }}</label>
+                  <input
+                    type="text"
+                    pInputText
+                    class="p-inputtext-sm"
+                    placeholder="Search"
+                    formControlName="location"
+                  />
+                  <div
+                    *ngIf="
+                      form.controls['location'].invalid &&
+                      (form.controls['location'].dirty ||
+                        form.controls['location'].touched)
+                    "
+                  ></div>
+                </div>
+  
+                <div class="row2">
+                  <label>{{ d.label2 }}</label>
+                  <p-dropdown
+                    [options]="sizes"
+                    class="p-inputtext-sm"
+                    placeholder="Search"
+                    optionLabel="size"
+                    formControlName="size"
+                  ></p-dropdown>
+                  <div
+                    *ngIf="
+                      form.controls['size'].invalid &&
+                      (form.controls['size'].dirty ||
+                        form.controls['size'].touched)
+                    "
+                  ></div>
+                </div>
+  
+                <div class="row3">
+                  <label>{{ d.label3 }}</label>
+                  <p-dropdown
+                    [options]="baths"
+                    class="p-inputtext-sm"
+                    placeholder="Search"
+                    optionLabel="bath"
+                    formControlName="bathroom"
+                  ></p-dropdown>
+                  <div
+                    *ngIf="
+                      form.controls['bathroom'].invalid &&
+                      (form.controls['bathroom'].dirty ||
+                        form.controls['bathroom'].touched)
+                    "
+                  ></div>
+                </div>
+  
+                <div class="row4">
+                  <label>{{ d.label4 }}</label>
+                  <p-dropdown
+                    [options]="beds"
+                    class="p-inputtext-sm"
+                    placeholder="Search"
+                    optionLabel="bed"
+                    formControlName="bedroom"
+                  ></p-dropdown>
+                  <div
+                    *ngIf="
+                      form.controls['bedroom'].invalid &&
+                      (form.controls['bedroom'].dirty ||
+                        form.controls['bedroom'].touched)
+                    "
+                  ></div>
+                </div>
+              </div>
+  
+              <div class="column2">
+                <div class="row2">
+                  <button class="btn1" pButton type="button">
+                    {{ d.btn1 }}<img class="buttonImg" src="{{ d.icon }}" />
+                  </button>
+                </div>
+                <div class="row3">
+                  <button class="btn2" pButton type="button">{{ d.btn2 }}</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="row1 slider">
+            <p class="contactformLabel">PRICE RANGE</p>
+            <p-slider [(ngModel)]="rangeValues" [range]="true"></p-slider>
+            <span
+              style="
+                padding: 10px 0px 0px 0px;
+                color: #6c5b5b !important;
+                font-weight: 500;
+              "
+            >
+              {{
+                rangeValues[0] + "000 AED - " + rangeValues[1] + "000 AED"
+              }}</span
+            >
+          </div>
+        </p-card>
+      </div>
+  
+      <!-- CONTENT STARTS -->
+  
+      <div class="contentContainer">
+        <div class="header">
+          <h1><img class="line" src="{{ data.imageUrl }}" />{{ data.header }}</h1>
+        </div>
+  
+        <div class="dataviewContainer">
+          <div class="headerPanel">
+            <p-tabView>
+              <p-tabPanel header="PENTHOUSES"></p-tabPanel>
+              <p-tabPanel header="VILLA"></p-tabPanel>
+              <p-tabPanel header="BEACHFRONT"></p-tabPanel>
+              <p-tabPanel header="SERVICED APARTMENTS"></p-tabPanel>
+            </p-tabView>
+          </div>
+          <div class="headerDropdown">
+            <p-dropdown
+              [options]="prices"
+              [(ngModel)]="priceList"
+              optionLabel="rate"
+            ></p-dropdown>
+          </div>
+        </div>
+  
+        <div class="gridContainer">
+          <!-- CARD -->
+          <div
+            class="card"
+            *ngFor="
+              let gd of gridData | paginate : { itemsPerPage: 15, currentPage: p }
+            "
+          >
+            <div class="btn1">
+              <button pButton>{{ gd.saleBtn }}</button>
+            </div>
+            <div class="imgContainer">
+              <img class="cardImage" src="{{ gd.propImg }}" />
+            </div>
+            <div class="subHead">
+              <p>{{ gd.subHead }}</p>
+            </div>
+            <div class="cardContent">
+              <div class="details1">
+                <div class="header">
+                  <h3>{{ gd.header1 }}</h3>
+                  <h3>{{ gd.header2 }}</h3>
+                </div>
+                <div class="btn2">
+                  <button pButton>{{ gd.viewBtn }}</button>
+                </div>
+              </div>
+              <div class="details2">
+                <div class="cardItems1">
+                  <p><img src="{{ gd.iconImg1 }}" /> {{ gd.iconHeader1 }}</p>
+                  <p><img src="{{ gd.iconImg2 }}" /> {{ gd.iconHeader2 }}</p>
+                </div>
+                <div class="cardItems2">
+                  <p><img src="{{ gd.iconImg3 }}" /> {{ gd.iconHeader3 }}</p>
+                  <p><img src="{{ gd.iconImg4 }}" /> {{ gd.iconHeader4 }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+    </div>
+  
+    <!-- FOOTER STARTS -->
+    <!-- <app-footer></app-footer> -->
+  </div>
+  

@@ -1,0 +1,124 @@
+<div class="propertySearch">
+    <div class="row1">
+      <div class="section1">
+        <div class="dropdown1 dropdownFlex">
+          <label>LOCATION</label>
+          <p-multiSelect
+            [options]="location"
+            appendTo="body"
+            class="p-inputtext-sm"
+            placeholder="Select"
+            display="chip"
+          ></p-multiSelect>
+        </div>
+      </div>
+      <div class="section2">
+        <div class="dropdown2 dropdownFlex">
+          <label>PROPERTY TYPE</label>
+          <p-dropdown
+            appendTo="body"
+            [options]="propertyType"
+            class="p-inputtext-sm"
+            placeholder="Select"
+          ></p-dropdown>
+        </div>
+      </div>
+      <div class="section3">
+        <div class="dropdownFlex">
+          <label>SIZE</label>
+          <div class="sizeContainer">
+            <p-dropdown
+              [options]="propertyType"
+              appendTo="body"
+              class="p-inputtext-sm"
+              placeholder="Min Size"
+            ></p-dropdown>
+            <span class="rangeSpan"> - </span>
+            <p-dropdown
+              [options]="propertyType"
+              class="p-inputtext-sm"
+              placeholder="Max Size"
+              appendTo="body"
+            ></p-dropdown>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row2">
+      <div class="section1">
+        <div class="dropdown1 dropdownFlex">
+          <label>BEDROOM</label>
+          <p-dropdown
+            [options]="bedrooms"
+            class="p-inputtext-sm"
+            placeholder="Select"
+            appendTo="body"
+          ></p-dropdown>
+        </div>
+      </div>
+      <div class="section2">
+        <div class="dropdown2 dropdownFlex">
+          <label>PRICE RANGE</label>
+          <p-slider
+            [(ngModel)]="rangeValues"
+            [min]="10000"
+            [max]="8000000"
+            [range]="true"
+          ></p-slider>
+          <div class="range-values">
+            <span>{{ rangeValues[0] }} AED</span>
+            <span>{{ rangeValues[1] }} AED</span>
+          </div>
+        </div>
+      </div>
+      <div class="section3">
+        <p-button (onClick)="toggleAdvancedSearch()"
+          >Advanced Search <img class="buttonImg" src="assets/icons/plusIcon.svg"
+        /></p-button>
+      </div>
+      <div class="section4" *ngIf="this.showAdvancedSearch == false">
+        <p-button class="customBtn">Search</p-button>
+      </div>
+    </div>
+  
+    <div class="row3" *ngIf="this.showAdvancedSearch">
+      <label>BATHROOMS</label>
+      <div class="radio">
+        <ng-container *ngFor="let data of bathrooms">
+          <p-radioButton
+            [inputId]="data.value"
+            [value]="data.value"
+            [(ngModel)]="bathroomValue"
+          ></p-radioButton>
+          <label
+            class="radioLabel"
+            [ngClass]="{ checked: bathroomValue === data.value }"
+            [for]="data.value"
+            >{{ data.label }}</label
+          >
+        </ng-container>
+      </div>
+    </div>
+  
+    <div class="row4" *ngIf="this.showAdvancedSearch">
+      <div class="dropdownFlex">
+        <label>FEATURES</label>
+        <div class="checkboxGrid">
+          <ng-container *ngFor="let data of featureList">
+            <p-checkbox
+              label="{{ data.label }}"
+              name="{{ data.label }}"
+              value="{{ data.value }}"
+              [(ngModel)]="features"
+            ></p-checkbox>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row5" *ngIf="this.showAdvancedSearch">
+      <p-button class="cancel" (onClick)="onCancel()">CANCEL</p-button>
+      <p-button class="customBtn">SEARCH</p-button>
+    </div>
+  </div>
+  

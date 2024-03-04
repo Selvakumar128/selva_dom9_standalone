@@ -1,0 +1,140 @@
+<div class="sellContainer">
+    <div class="whatsappContainer" *ngFor="let wp of whatsapp">
+      <a href="https://web.whatsapp.com"
+        ><img class="whatsapp" src="{{ wp.img }}"
+      /></a>
+    </div>
+  
+    <!-- NAVIGATION STARTS -->
+    <!-- <app-navbar></app-navbar> -->
+  
+    <!--SLIDER STARTS -->
+    <div class="sliderContainer" *ngFor="let sl of slider">
+      <div class="sliderImage">
+        <img class="sliderBgImg" src="{{ sl.img }}" />
+      </div>
+      <div class="sliderText">
+        <h1>
+          {{ sl.header1 }}<br />
+          {{ sl.header2 }}
+        </h1>
+      </div>
+    </div>
+  
+    <!--CARD CONTAINER STARTS -->
+    <div class="cardContainer" *ngFor="let crd of card">
+      <div class="cardSubContainer">
+        <p-card class="card">
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div>
+              <h3>{{ crd.header }}</h3>
+            </div>
+            <div class="inputs">
+              <div class="column1">
+                <label>{{ crd.label1 }}</label>
+                <input
+                  type="text"
+                  pInputText
+                  class="p-inputtext-sm"
+                  placeholder="Enter Name"
+                  formControlName="name"
+                />
+                <div
+                  *ngIf="
+                    form.controls['name'].invalid &&
+                    (form.controls['name'].dirty || form.controls['name'].touched)
+                  "
+                ></div>
+  
+                <label>{{ crd.label2 }}</label>
+                <div class="phnInput">
+                  <angular-phone-number-input
+                    class="phoneNumber"
+                    formControlName="phone"
+                    [defaultCountry]="'SA'" 
+                    [error]="form.get('phone')?.touched && form.get('phone')?.invalid"             
+              ></angular-phone-number-input>
+              <!-- <div *ngIf="form.controls['phone'].invalid && (form.controls['phone'].dirty || form.controls['phone'].touched)"></div> -->
+                </div>    
+              </div>
+  
+              <div class="column2">
+                <label>{{ crd.label3 }}</label>
+                <input
+                  type="text"
+                  pInputText
+                  class="p-inputtext-sm"
+                  placeholder="Enter Email"
+                  formControlName="email"
+                />
+                <div
+                  *ngIf="
+                    form.controls['email'].invalid &&
+                    (form.controls['email'].dirty ||
+                      form.controls['email'].touched)
+                  "
+                ></div>
+  
+                <label>{{ crd.label4 }}</label>
+                <input
+                  pInputText
+                  class="p-inputtext-sm"
+                  placeholder="I'd would like to sell my property with DOM9"
+                  formControlName="message"
+                />
+              </div>
+              <div class="column1">
+                <label>{{ crd.label5 }}</label>
+                <div class="radioGroup">
+                  <div *ngFor="let category of categories" class="radio">
+                    <p-radioButton
+                      [inputId]="category.key"
+                      [value]="category.key"
+                      formControlName="selectedCategory"
+                    ></p-radioButton>
+                    <label [for]="category.key">{{ category.name }}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <p-button type="submit">{{ crd.btn }}</p-button>
+            </div>
+          </form>
+        </p-card>
+      </div>
+    </div>
+  
+    <!--CONTENT STARTS -->
+    <div class="contentContainer">
+      <div class="contentSubContainer">
+        <div class="header" *ngFor="let hdr of header">
+          <div class="headerImg">
+            <img src="{{ hdr.headerImg }}" />
+          </div>
+          <div class="headerTitle">
+            <h4>{{ hdr.subHeader }}</h4>
+            <h1>{{ hdr.mainHeader }}</h1>
+          </div>
+        </div>
+  
+        <div class="headerCont">
+          <div class="card-1" *ngFor="let data of cardContent">
+            <p-card>
+              <div class="cardImg">
+                <img src="{{ data.image }}" />
+              </div>
+              <div class="cardContent">
+                <h3>{{ data.subHeader }}</h3>
+                <p>{{ data.para }}</p>
+              </div>
+            </p-card>
+          </div>
+        </div>
+      </div>
+  
+      <!-- FOOTER STARTS -->
+      <!-- <app-footer></app-footer> -->
+    </div>
+  </div>
+  

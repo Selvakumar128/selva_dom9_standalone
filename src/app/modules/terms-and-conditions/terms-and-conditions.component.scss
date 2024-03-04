@@ -1,0 +1,68 @@
+@import '../../../assets/theme/theme-variable.scss';
+
+*{
+    font-family:$regular-font;
+    h1,h2,h3,h4,h5,h6{
+        font-family:'helvetica-bold';
+    }
+}
+
+.otrDiv{
+    background: $primaryColor;
+    .whatsappContainer{ 
+        float: right;
+        .whatsapp{
+            position: fixed;
+            cursor: pointer;
+            height: 70px;
+            bottom: 0%;
+            right: 15px;
+            z-index: 99999999;
+        }
+    }
+    .innerDiv{
+        .header {
+            display: flex;
+            padding: 20px 0px 0px 50px;
+
+            .headerImg {
+                height: 47px;
+                width: 4px;
+                background-color:$secondaryColor;
+                margin-right: 10px;
+            }
+
+            .headerTitle {
+                color: $secondaryColor;
+
+                h1,
+                h4 {
+                    margin: 0px;
+                }
+            }
+        }
+        h3{
+            font-weight: 700;
+            font-family: $regular-font;
+            font-size: 24px;
+            padding: 20px 0px 0px 50px;
+
+        }
+        .cardCont{
+            margin: 0px;
+            padding: 0px 10px 10px 0px;
+            .para1 {
+                padding: 0px 49px;
+                margin: 0;
+                line-height: 30px;
+                font-weight: 500;
+                font-size: 20px;
+                text-align: justify;
+                p{
+                    color:$blackColor;
+                    font-family: $regular-font;
+                }
+            }
+        }
+    }
+}

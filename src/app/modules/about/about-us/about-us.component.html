@@ -1,0 +1,151 @@
+<div class="aboutContainer">
+    <div class="whatsappContainer">
+      <a href="https://web.whatsapp.com"
+        ><img class="whatsapp" src="{{ aboutData.whatsappimg }}"
+      /></a>
+    </div>
+  
+    
+  
+    <!-- NAVIGATION STARTS -->
+    <!-- <app-navbar></app-navbar> -->
+  
+    <!-- SLIDER STARTS -->
+    <div class="sliderContainer">
+      <div class="sliderImage">
+        <img class="sliderBgImg" src="{{ aboutData.sliderImage }}" />
+      </div>
+      <div class="sliderText">
+        <h1>{{ aboutData.sliderHeader }}</h1>
+      </div>
+    </div>
+  
+    <!--CONTENT STARTS -->
+    <div class="mainContainer">
+      <!-- Mission Container -->
+      <div class="missionContainer">
+        <div class="header">
+          <div class="headerImg">
+            <img src="{{ aboutData.Headerimg }}" />
+          </div>
+          <div class="headerTitle">
+            <h4>{{ aboutData.missionHeader }}</h4>
+            <h1>{{ aboutData.missionSubHeader }}</h1>
+          </div>
+        </div>
+        <div class="missionContent">
+          <div class="missionContText">
+            <h3>{{ aboutData.missionDescription }}</h3>
+            <p>{{ aboutData.missionContent }}</p>
+          </div>
+          <div class="missionContImg">
+            <div class="img-1">
+              <img
+                src="{{ aboutData.missionImage1 }}"
+                src="{{ aboutData.missionImage1 }}"
+              />
+            </div>
+            <div class="img-2"><img src="{{ aboutData.missionImage2 }}" /></div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Vision Container -->
+      <div class="visionContainer">
+        <div class="header">
+          <div class="headerImg">
+            <img src="{{ aboutData.Headerimg }}" />
+          </div>
+          <div class="headerTitle">
+            <h4>{{ aboutData.visionHeader }}</h4>
+            <h1>{{ aboutData.visionSubHeader }}</h1>
+          </div>
+        </div>
+        <div class="visionContent">
+          <div class="visionContImg">
+            <div class="img-1"><img src="{{ aboutData.visionImg1 }}" /></div>
+            <div class="img-2"><img src="{{ aboutData.visionImg2 }}" /></div>
+          </div>
+          <div class="visionContText">
+            <h1>{{ aboutData.visionDescription }}</h1>
+            <div>
+              <p-card>
+                <div class="cardContent">
+                  <div class="cardHead">
+                    <h3>{{ aboutData.visionCardHeader }}</h3>
+                  </div>
+                  <div class="cardDetails">
+                    <p>{{ aboutData.visionCardDetails }}</p>
+                  </div>
+                </div>
+              </p-card>
+            </div>
+  
+            <div>
+              <p-card>
+                <div class="cardContent">
+                  <div class="cardHead">
+                    <h3>{{ aboutData.visionCardHeader }}</h3>
+                  </div>
+                  <div class="cardDetails">
+                    <p>{{ aboutData.visionCardDetails }}</p>
+                  </div>
+                </div>
+              </p-card>
+            </div>
+  
+            <div>
+              <p-card>
+                <div class="cardContent">
+                  <div class="cardHead">
+                    <h3>{{ aboutData.visionCardHeader }}</h3>
+                  </div>
+                  <div class="cardDetails">
+                    <p>{{ aboutData.visionCardDetails }}</p>
+                  </div>
+                </div>
+              </p-card>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Office Container -->
+      <div class="officeContainer">
+        <div class="header">
+          <div class="headerImg">
+            <img src="{{ aboutData.Headerimg }}" />
+          </div>
+          <div class="headerTitle">
+            <h4>{{ aboutData.officeHeader }}</h4>
+            <h1>{{ aboutData.officeSubHeader }}</h1>
+          </div>
+        </div>
+        <div class="officeContent">
+          <div class="para">
+            <p>
+              {{ aboutData.officeDescription }}
+            </p>
+          </div>
+  
+          <div class="officeSubcontent">
+            <div class="card-1">
+              <iframe
+                class="pic-1"
+                src="https://www.youtube.com/embed/7Qivx2om0MM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+        <div class="btn">
+          <p-button routerLink="/contact-us">{{ aboutData.btn }}</p-button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

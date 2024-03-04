@@ -1,0 +1,80 @@
+//Theme colors
+
+$darkbrown: #574142;
+$lightbrown: #6C5B5B;
+$mediumbrown: #655252;
+$opaqueBrown: #6c5b5b47;
+$darkColor: #655252;
+$paleColor: #DCC5BA;
+$opaquePale: #57414254;
+$hoverColor: #2c3126;
+$darkHoverColor: #39312a;
+$ph: #594F47;
+$placeholder: #574D45;
+$boxshadow: #453c3c;
+$opaqueBoxshadow: #453c3c4d;
+$borderColor: #6A6A6A;
+$inputBorder: #80808073;
+$validateColor: red;
+$smokeycolor: rgba(0, 0, 0, 0.34);
+
+// Updated
+$primaryColor: #E6DDCC;
+$primaryShade1: #E0D7C6;
+$border: #4B3F34;
+$secondaryColor: #6C5B5B;
+$hoverBrown: #574142;
+$whiteColor: #ffffff;
+$blackColor: #3A3A3A;
+$error: #ff0000;
+$dropdownbg: #D9D9D9;
+
+
+
+//Theme Fontsize
+$sz-9-font: 9px;
+$sz-10-font: 10px;
+$sz-11-font: 11px;
+$sz-12-font: 12px;
+$sz-13-font: 13px;
+$sz-14-font: 14px;
+$sz-15-font: 15px;
+$sz-16-font: 16px;
+$sz-17-font: 17px;
+$sz-18-font: 18px;
+$sz-20-font: 20px;
+$sz-22-font: 22px;
+$sz-24-font: 24px;
+$sz-25-font: 25px;
+$sz-26-font: 26px;
+$sz-27-font: 27px;
+$sz-28-font: 28px;
+$sz-30-font: 30px;
+$sz-32-font: 32px;
+$sz-34-font: 34px;
+$sz-35-font: 35px;
+$sz-36-font: 36px;
+$sz-38-font: 38px;
+$sz-40-font: 40px;
+$sz-42-font: 42px;
+$sz-72-font: 72px;
+
+
+@font-face {
+    font-family: 'helvetica';
+    src: url('../fonts/Helvetica\ Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+@font-face {
+    font-family: 'helvetica-bold';
+    src: url('../fonts/Helvetica-Bold-Font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+$regular-font: 'helvetica';
+$bold-font: 'helvetica-bold'

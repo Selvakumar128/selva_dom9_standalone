@@ -1,0 +1,972 @@
+@import '../../../../assets/theme/theme-variable.scss';
+
+
+.aboutContainer {
+    overflow: hidden;
+
+    .whatsappContainer {
+        float: right;
+
+        .whatsapp {
+            position: fixed;
+            cursor: pointer;
+            height: 70px;
+            bottom: 0%;
+            right: 15px;
+            z-index: 99999999;
+        }
+    }
+
+    //Slider starts--------------------------------------------------------->
+    .sliderContainer {
+        position: relative;
+
+        .sliderImage {
+            display: flex;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .sliderText {
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 10%;
+
+            h1 {
+                color: $whiteColor;
+                font-size: $sz-36-font;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+
+    //Content starts--------------------------------------------------------->
+
+    .mainContainer {
+        background-color: $primaryColor;
+
+        .header {
+            display: flex;
+            padding: 15px;
+
+            .headerImg {
+                img {
+                    height: 50px;
+                    width: 26px;
+                    padding: 0px 10px;
+                }
+            }
+
+            .headerTitle {
+
+                h1,
+                h4 {
+                    margin: 0px;
+                    color: $secondaryColor;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+
+        //MISSION CONTAINER---------------------------------------------------------------------------->>>>>
+        .missionContainer {
+            padding: 50px 50px 30px 50px;
+
+            .missionContent {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                .missionContText {
+                    padding: 10px 25px;
+                    width: 50%;
+
+                    h3 {
+                        color: $blackColor;
+                        padding-bottom: 20px;
+                        line-height: 25px;
+                        font-weight: 100;
+                        font-size: $sz-20-font;
+                    }
+
+                    p {
+                        padding-bottom: 20px;
+                        padding-right: 20px;
+                        line-height: 25px;
+                        font-size: $sz-16-font;
+                        color: $blackColor;
+                        text-align: justify;
+                    }
+                }
+
+                .missionContImg {
+                    width: 40%;
+                    position: relative;
+                    padding: 0px 50px;
+
+                    .img-1 {
+                        width: 100%;
+
+                        img {
+                            width: 100%;
+                            position: relative;
+                            bottom: 65px;
+                            right: 0;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .img-2 {
+                        width: 60%;
+                        position: absolute;
+                        transform: translate(-50px, -50px);
+                        left: -65px;
+                        bottom: -49px;
+
+                        img {
+                            width: 100%;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        //VISION CONTAINER---------------------------------------------------------------------------->>>>>
+        .visionContainer {
+            padding: 20px 50px;
+
+            .visionContent {
+                display: flex;
+                justify-content: space-between;
+
+                .visionContImg {
+                    position: relative;
+
+                    .img-1 {
+                        width: 80%;
+                        position: relative;
+                        transform: translate(50%, 15%);
+                        right: -40%;
+                        top: 0;
+
+                        img {
+                            width: 100%;
+                            border-radius: 20px;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .img-2 {
+                        width: 80%;
+                        position: absolute;
+                        transform: translate(-50px, 50px);
+                        right: -20px;
+                        top: 50px;
+
+                        img {
+                            width: 100%;
+                            border-radius: 20px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .visionContText {
+                    width: 50%;
+                    padding-right: 50px;
+
+                    h1 {
+                        letter-spacing: 1px;
+                        color: $blackColor;
+                        line-height: 30px;
+                    }
+
+                    .cardContent {
+                        padding: 10px 20px;
+
+                        .cardHead {
+                            h3 {
+                                margin: 0px;
+                                color: $secondaryColor;
+                                letter-spacing: 1px;
+                                font-size: $sz-18-font;
+                            }
+                        }
+
+                        .cardDetails {
+                            p {
+                                margin: 0px;
+                                padding: 10px 0px;
+                                font-size: $sz-16-font;
+                                line-height: 20px;
+                                color: $blackColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //OFFICE CONTAINER---------------------------------------------------------------------------->>>>>
+        .officeContainer {
+            background-color: $primaryShade1;
+            padding: 20px 50px;
+
+            .officeContent {
+                .para {
+                    padding: 10px 30px;
+                    color: $blackColor;
+                    font-size: $sz-18-font;
+                }
+
+                .officeSubcontent {
+                    display: flex;
+                    justify-content: center;
+                    padding: 25px;
+
+                    .card-1 {
+                        position: relative;
+                        width: 80%;
+                        // padding-right: 15px;
+
+                        .pic-1 {
+                            width: 100%;
+                            height: 400px;
+                            border-radius: 10px;
+                            object-fit: cover;
+                        }
+
+                        .youtube {
+                            cursor: pointer;
+                            position: absolute;
+                            transform: translate(-50%, -50%);
+                            left: 50%;
+                            top: 50%;
+                        }
+                    }
+
+                    .colm-2 {
+                        width: 50%;
+
+                        .card-2,
+                        .card-3 {
+                            overflow: hidden;
+                            width: 100%;
+                            height: 340px;
+                            border-radius: 10px;
+
+                            .pic-2,
+                            .pic-3 {
+                                width: 100%;
+                                height: 100%;
+                                transition: all .5s ease-in-out;
+                            }
+
+                            .pic-2:hover,
+                            .pic-3:hover {
+                                transform: scale(1.1);
+                                transition: all .5s ease-in-out;
+                                transition-duration: 0.5s;
+                                transition-timing-function: ease-in-out;
+                                transition-delay: 0s;
+                                transition-property: all;
+                            }
+                        }
+
+                        .card-3 {
+                            margin-top: 20px;
+                        }
+                    }
+
+                    .status {
+                        display: flex;
+                        justify-content: space-between;
+                        color: $whiteColor;
+                        padding: 0px 20px 0px 20px;
+                        position: relative;
+                        transform: translate(0px, -70px);
+                        bottom: 70px;
+                        left: 0;
+
+                        img {
+                            width: 5px;
+                            height: 20px;
+                        }
+
+                        h2 {
+                            letter-spacing: 1px;
+                        }
+
+                        p {
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                position: relative;
+                // bottom: 0;
+                // left: 44%;
+                text-align: center;
+                padding: 50px 0px;
+            }
+        }
+    }
+}
+
+
+
+::ng-deep {
+    .aboutContainer {
+        .visionContainer {
+            .p-card {
+                background-color: $primaryShade1;
+                border-radius: 10px;
+                box-shadow: none !important;
+                margin: 20px 0px;
+                cursor: pointer;
+                border: 1px solid transparent;
+            }
+
+            .p-card .p-card-body {
+                padding: 0px !important;
+            }
+
+            .p-card:hover {
+                border: 1px solid $border;
+            }
+
+            .p-card {
+                transition: all .5s ease-in-out;
+
+                .cardContent {
+                    transition: all .5s ease-in-out;
+                    border-left: 5px solid transparent !important;
+                }
+
+                .cardHead {
+                    h3 {
+                        transition: all .5s ease-in-out;
+                    }
+                }
+            }
+
+            .p-card:hover {
+                .cardContent {
+                    border-left: 5px solid $secondaryColor !important;
+                    transition: all .3s ease-in-out;
+                    transition-duration: 0.2s;
+                    transition-timing-function: ease-in-out;
+                    transition-delay: 0s;
+                    transition-property: all;
+                }
+
+                .cardHead {
+                    h3 {
+                        color: $secondaryColor !important;
+                        transition: all .6s ease-in-out;
+                        transition-duration: 0.5s;
+                        transition-timing-function: ease-in-out;
+                        transition-delay: 0s;
+                        transition-property: all;
+                    }
+                }
+            }
+
+            .p-card .p-card-content {
+                padding: 10px 0px;
+            }
+        }
+
+        .btn {
+            .p-button {
+                font-family: $regular-font;
+                background-color: $secondaryColor;
+                border: 1px solid transparent;
+                color: $primaryColor;
+                height: 35px;
+                border-radius: 10px;
+                padding: 5px 30px;
+                transition: all .6s ease-in-out;
+            }
+
+            .p-button:focus {
+                box-shadow: none;
+            }
+
+            .p-button:enabled:hover {
+                background-color: $hoverBrown;
+                color: $whiteColor;
+                border: 1px solid transparent;
+                transition: all .6s ease-in-out;
+                transition-duration: 0.5s;
+                transition-timing-function: ease-in-out;
+                transition-delay: 0s;
+                transition-property: all;
+            }
+
+            .p-button:enabled:active {
+                background-color: $hoverBrown;
+                border: 1px solid transparent;
+            }
+        }
+    }
+}
+
+
+
+//Responsiveness-------------------------------------------------------------------------------------->>>>>>>>>
+@media only screen and (min-width:4501px) and (max-width: 6000px) {
+
+    /*25*/
+    .aboutContainer {
+        .missionContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+
+        .visionContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+
+        .officeContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+    }
+
+}
+
+@media only screen and (min-width:3100px) and (max-width: 4500px) {
+
+    /*33%*/
+    .aboutContainer {
+        .missionContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+
+        .visionContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+
+        .officeContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+    }
+}
+
+@media only screen and (min-width:2701px) and (max-width: 3100px) {
+
+    /*50%*/
+    .aboutContainer {
+        .missionContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+
+        .visionContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+
+        .officeContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+}
+
+@media only screen and (min-width:2001px) and (max-width: 2700px) {
+
+    /*67%*/
+    .aboutContainer {
+        .missionContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+
+        .visionContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+
+        .officeContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+    }
+}
+
+@media only screen and (min-width: 1801px) and (max-width: 2000px) {
+
+    /*75%*/
+    .aboutContainer {
+        .missionContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+
+        .visionContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+
+        .officeContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+    }
+}
+
+@media only screen and (min-width:1601px) and (max-width: 1800px) {
+
+    /*80%*/
+    .aboutContainer {
+        .missionContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .visionContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+
+        .officeContainer {
+            max-width: 1250px !important;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+    }
+}
+
+@media only screen and (min-width:1517px) and (max-width: 1600px) {
+    /*90%*/
+}
+
+@media (max-width:1199px) {
+    .mainContainer {
+        .missionContainer {
+            border-bottom: 1px solid $darkbrown;
+
+            .missionContent {
+                .missionContText {
+                    width: 60% !important;
+                }
+
+                .missionContImg {
+                    padding: 0 !important;
+
+                    .img-1 img {
+                        bottom: 0 !important;
+                        height: 300px !important;
+                    }
+
+                    .img-2 {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .visionContainer {
+        border-bottom: 1px solid $darkbrown;
+
+        .visionContent {
+            .visionContImg {
+                .img-1 {
+                    display: none;
+                }
+
+                .img-2 {
+                    position: relative !important;
+                    transform: none !important;
+                    width: 100% !important;
+                    right: -35px !important;
+                    top: 50px !important;
+                }
+            }
+
+            .visionContText {
+                width: 60% !important;
+            }
+        }
+    }
+}
+
+@media (max-width:1090px) {
+    .visionContainer {
+        padding: 30px !important;
+
+        .visionContent {
+            display: block !important;
+
+            .visionContImg {
+                display: flex !important;
+                justify-content: space-evenly !important;
+
+                .img-1 {
+                    display: block !important;
+                    position: relative !important;
+                    transform: none !important;
+                    right: 0 !important;
+                    width: 45% !important;
+                    top: 0 !important;
+
+                    img {
+                        width: 100%;
+                        border-radius: 20px;
+                        object-fit: cover;
+                        height: 350px;
+                    }
+                }
+
+                .img-2 {
+                    position: none !important;
+                    transform: none !important;
+                    width: 100% !important;
+                    right: 0 !important;
+                    top: 0 !important;
+                    width: 45% !important;
+
+                    img {
+                        width: 100%;
+                        height: 350px !important;
+                    }
+                }
+            }
+
+            .visionContText {
+                width: 100% !important;
+                padding: 15px !important;
+            }
+        }
+    }
+
+    .officeContainer {
+        padding: 20px !important;
+
+        .para {
+            padding: 0px 25px !important;
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .sliderContainer {
+        .sliderImage {
+            img {
+                height: 300px !important;
+            }
+        }
+    }
+
+    .officeContainer {
+        .officeContent {
+            .officeSubcontent {
+                .card-1 {
+                    height: 500px !important;
+
+                    .pic-1 {
+                        height: 500px !important;
+                    }
+
+                    .youtube {
+                        cursor: pointer;
+                        position: absolute;
+                        transform: translate(-50%, -50%);
+                        left: 50%;
+                        top: 50%;
+                    }
+                }
+
+                .colm-2 {
+
+                    .card-2,
+                    .card-3 {
+                        width: 100%;
+                        height: 240px !important;
+                    }
+                }
+            }
+        }
+
+        // .btn {
+        //     left: 40% !important;
+        // }
+    }
+}
+
+@media (max-width: 767px) {
+    .mainContainer {
+        .missionContainer {
+            padding: 10px 0px !important;
+
+            .missionContent {
+                display: block !important;
+
+                .missionContText {
+                    width: 100% !important;
+                }
+
+                .missionContImg {
+                    width: 100% !important;
+                    display: flex;
+
+                    .img-1 img {
+                        width: 100% !important;
+                        height: 250px !important;
+                        padding: 0px 30px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .visionContainer {
+        padding: 0px !important;
+
+        .visionContent {
+            .visionContText {
+                padding: 15px 25px !important;
+
+                .cardContent {
+                    padding: 10px !important;
+                }
+            }
+
+            .visionContImg {
+                display: block !important;
+
+                .img-1 {
+                    width: 100% !important;
+                    padding: 0px 25px !important;
+
+                    img {
+                        height: 250px !important;
+                        width: 100% !important;
+                    }
+                }
+
+                .img-2 {
+                    display: none !important;
+                }
+            }
+        }
+    }
+
+    .officeContainer {
+        padding: 10px 0px !important;
+
+        .officeContent {
+            .officeSubcontent {
+                display: block !important;
+
+                .card-1 {
+                    width: 100% !important;
+                    height: 300px !important;
+                    padding: 0 !important;
+
+                    .pic-1 {
+                        width: 100%;
+                        height: 300px !important;
+                    }
+
+                    .youtube {
+                        width: 20% !important;
+                    }
+                }
+
+                .colm-2 {
+                    width: 100% !important;
+
+                    .card-2,
+                    .card-3 {
+                        width: 100%;
+                        height: 300px;
+                        margin-top: 20px !important;
+
+                        .pic-2,
+                        .pic-3 {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        // .btn {
+        //     padding: 10px !important;
+        //     left: 33% !important;
+        // }
+    }
+}
+
+@media (max-width:640px) {
+    .mainContainer {
+        .missionContainer {
+            .missionContent {
+                .missionContImg {
+                    .img-1 img {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .aboutContainer {
+        .whatsappContainer {
+            .whatsapp {
+                height: 50px;
+            }
+        }
+    }
+
+    .officeContainer {
+        .btn {
+            left: 25% !important;
+        }
+    }
+}
+
+@media (max-width:375px) {}

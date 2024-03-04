@@ -1,0 +1,52 @@
+@import '../../../../assets/theme/theme-variable.scss';
+
+// *{
+//     font-family: 'ProximaNova-Regular';
+//     h1,h2,h3,h4,h5,h6{
+//         font-family:'ProximaNova-Bold';
+//     }
+// }
+
+// @font-face {
+//     font-family:'ProximaNova-Regular';
+//     src: url('../../../assets/fonts/MiConv.com__ProximaNova-Regular.ttf') format("opentype");
+// }
+// @font-face {
+//     font-family:'ProximaNova-Bold';
+//     src: url('../../../assets/fonts/MiConv.com__Proxima\ Nova\ Bold.ttf') format("opentype");
+// }
+
+
+::ng-deep{
+    
+    .popup-container{
+        width: 1051px;
+        height: 400px;
+        .p-dynamicdialog.p-dialog .p-dialog-content {
+            color: #495057;
+            padding: 0 1.5rem 2rem 1.5rem;
+        }
+        .p-dynamicdialog.p-dialog-content {
+            /* overflow-y: auto; */
+            flex-grow: 1;
+        }
+        .p-dynamicdialog.p-dialog .p-dialog-header {
+            display: none;
+        }
+        .p-dynamicdialog.p-dialog {
+            background: transparent;
+            overflow-y: hidden;
+            border-radius: 0px;
+            box-shadow: none;
+        }
+        .p-dynamicdialog.p-dialog-content.ng-tns-c75-9 {
+            background: none;
+            overflow: hidden;
+        }
+        .p-dynamicdialog.sliderContainer .card .p-dialog .p-dialog-content{
+            background-color: transparent !important;
+            overflow: hidden !important;
+        }
+        
+    }
+}

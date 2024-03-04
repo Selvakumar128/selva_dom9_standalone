@@ -1,0 +1,1408 @@
+@import '../../../../assets/theme/theme-variable.scss';
+
+
+.propertyListingContainer {
+    background: $primaryColor;
+
+    .flex {
+        display: flex;
+        column-gap: 10px;
+    }
+
+    .dropdownFlex {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        row-gap: 10px;
+        justify-content: flex-end;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+        margin: 0;
+    }
+
+    .whatsappContainer {
+        float: right;
+
+        .whatsapp {
+            position: fixed;
+            cursor: pointer;
+            height: 70px;
+            bottom: 0%;
+            right: 15px;
+            z-index: 99999999;
+        }
+    }
+
+    //Slider starts--------------------------------------------------------->
+    .sliderContainer {
+        position: relative;
+
+        .sliderImage {
+            display: flex;
+            min-height: 360px;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .sliderText {
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 8%;
+
+            h1 {
+                color: $whiteColor;
+                font-size: $sz-36-font;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    .searchContainer {
+        width: 100%;
+        background: $primaryColor;
+        padding: 30px 0;
+
+        .app-search {
+            transform: translateY(-160px);
+        }
+
+
+    }
+
+    //Card Container starts--------------------------------------------------------->
+    .cardContainer {
+        max-height: 200px;
+
+        .listPropertycard {
+            .inputs {
+                .column1 {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding: 10px 15px;
+
+                    .row1,
+                    .row2,
+                    .row3 {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0px 10px;
+                    }
+
+                    .row1 {
+                        width: 60%;
+                    }
+
+                    .row2,
+                    .row3 {
+                        width: 30%;
+                    }
+
+                    label {
+                        padding: 10px 0px;
+                        color: $lightbrown;
+                    }
+                }
+
+                .column2 {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    padding: 10px 15px;
+
+                    .row1,
+                    .row2,
+                    .row3 {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .row1 {
+                        width: 100% !important;
+                    }
+
+                    .row2 {
+                        padding: 10px 20px;
+                        position: relative;
+                        right: 50px;
+
+                        //width: 20%;
+                        .btn1 {
+                            display: flex;
+                            justify-content: space-between;
+                            background-color: $opaqueBrown;
+                            color: $darkbrown;
+                            font-size: $sz-20-font;
+                            height: 45px;
+                            padding: 10px;
+                            border: 1px solid transparent;
+                            transition: all .6s ease-in-out;
+
+                            .buttonImg {
+                                padding-left: 8px;
+                            }
+                        }
+
+                        .btn1:hover {
+                            background-color: $darkbrown;
+                            color: $whiteColor;
+                            transition: all .6s ease-in-out;
+                            transition-duration: 0.5s;
+                            transition-timing-function: ease-in-out;
+                            transition-delay: 0s;
+                            transition-property: all;
+                        }
+                    }
+
+                    .row3 {
+                        width: 17%;
+                        padding: 10px 20px;
+
+                        .btn2 {
+                            display: flex;
+                            justify-content: center;
+                            background-color: $mediumbrown;
+                            color: $whiteColor;
+                            font-size: $sz-18-font;
+                            letter-spacing: 0.5px;
+                            height: 45px;
+                            border: 1px solid transparent;
+                            border-radius: 12px;
+                            transition: all .6s ease-in-out;
+                        }
+
+                        .btn2:hover {
+                            background-color: $darkbrown;
+                            transition: all .6s ease-in-out;
+                            transition-duration: 0.5s;
+                            transition-timing-function: ease-in-out;
+                            transition-delay: 0s;
+                            transition-property: all;
+                        }
+                    }
+
+                    .cancel {
+                        cursor: pointer;
+                        color: $lightbrown;
+                        font-family: $regular-font;
+                        font-weight: 700;
+                        letter-spacing: 2px;
+                        font-size: 20px;
+                        padding-right: 40px;
+                    }
+                }
+
+                .column3 {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding: 10px 15px;
+
+                    .row1 {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0px 10px;
+                    }
+
+                    .row1 {
+                        width: 100%;
+                    }
+
+                    .bedtabs {
+                        color: black;
+                    }
+
+                    label {
+                        padding: 10px 0px;
+                        color: $lightbrown;
+                    }
+                }
+
+                .column4 {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding: 10px 15px;
+
+                    .row1 {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0px 10px;
+                    }
+
+                    .row1 {
+                        width: 100%;
+                    }
+
+                    label {
+                        padding: 10px 0px;
+                        color: $lightbrown;
+                    }
+
+                    .checkboxOtr {
+                        display: flex;
+                    }
+
+                    .checkbox {
+                        // display: grid;
+                        // grid-template-columns: 1fr 1fr 1fr;
+                        width: 20%;
+                    }
+
+                    .checkboxinner {
+                        display: flex;
+
+                        label {
+                            margin-left: 10px;
+                            font-family: $regular-font;
+                            font-size: 18px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Content starts--------------------------------------------------------->
+    .mainContainer {
+        background-color: $primaryColor;
+        padding: 0px 50px 50px 50px;
+        margin-top: -150px;
+
+        .sectionHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            row-gap: 15px;
+
+
+            h1 {
+                margin: 0px;
+                color: $secondaryColor;
+                letter-spacing: 1px;
+            }
+
+            .line {
+                height: 45px;
+                width: 5px;
+                margin-right: 10px;
+                position: relative;
+                top: 10px;
+            }
+
+            .dropdownContainer {
+                min-width: 15%;
+            }
+        }
+
+        .dataviewContainer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .gridContainer {
+            display: grid;
+            justify-content: space-evenly;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            padding: 30px 10px;
+            min-height: 600px;
+
+            .card {
+                position: relative;
+                margin: 12px 15px;
+                border-radius: 10px;
+                transition: all .5s ease-in-out;
+                box-shadow: 4px 4px 10px 0 rgba($blackColor, 0.3);
+                background: $primaryColor;
+
+                .btn1 {
+                    button {
+                        position: absolute;
+                        right: 10px;
+                        top: 10px;
+                        z-index: 1;
+                    }
+                }
+
+                .subHead {
+                    p {
+                        position: absolute;
+                        top: 50%;
+                        left: 30%;
+                        font-weight: bold;
+                        color: $whiteColor;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        margin: 0;
+                        letter-spacing: 1px;
+                        padding: 10px;
+                        // background-image: linear-gradient(to right, rgba($blackColor , 0.05), rgba($blackColor , 50%), rgba($blackColor, 0.05));
+                        background-image: linear-gradient(to right, rgba(#d9d9d9, 0.1), $blackColor, rgba(#d9d9d9, 0.1));
+                    }
+                }
+
+                .imgContainer {
+                    height: 250px;
+                    overflow: hidden;
+                    border-radius: 10px;
+
+                    .cardImage {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                        object-fit: cover;
+                        transition: all .5s ease-in-out;
+                    }
+                }
+
+                .cardContent {
+                    background-color: inherit;
+                    padding: 15px;
+                    border-radius: 0px 0px 10px 10px;
+                    transition: all 0.5s ease-in-out;
+
+                    .details1 {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 10px;
+
+                        .header {
+                            padding: 0;
+
+                            .price {
+                                color: $secondaryColor;
+                            }
+                        }
+
+                        .btn2 {
+                            ::ng-deep {
+                                .p-button {
+                                    padding: 5px 10px !important;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .details2 {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .locationImg {
+                            width: 18px;
+                        }
+
+                        .bedroomImg {
+                            width: 20px;
+                        }
+
+                        p {
+                            color: inherit;
+                            margin: 10px 0px;
+                        }
+                    }
+                }
+            }
+
+            .card:hover {
+                // box-shadow: 2px 2px 5px 2px rgba(44, 44, 44, 0.562);
+                transition: all .6s ease-in-out;
+                transition-duration: 0.5s;
+                transition-timing-function: ease-in-out;
+                transition-delay: 0s;
+                transition-property: all;
+
+                .cardContent {
+                    transition: all .6s ease-in-out;
+                    transition-duration: 0.5s;
+                    transition-timing-function: ease-in-out;
+                    transition-delay: 0s;
+                    transition-property: all;
+                }
+
+                .cardImage {
+                    transform: scale(1.1);
+                    transition: all .6s ease-in-out;
+                    transition-duration: 0.5s;
+                    transition-timing-function: ease-in-out;
+                    transition-delay: 0s;
+                    transition-property: all;
+                }
+            }
+        }
+
+        pagination-controls {
+            text-align: center;
+        }
+    }
+}
+
+.slider {
+    width: 40% !important;
+    overflow: hidden;
+    position: relative;
+    bottom: 12%;
+    left: 24px;
+    bottom: 80px;
+    color: $lightbrown;
+}
+
+// ::ng-deep {
+//     .propertyListingContainer {
+//         .p-card {
+//             font-family: ProximaNova;
+//             background-color: $whiteColor;
+//             color: $blackColor;
+//             position: relative;
+//             transform: translateY(-45%);
+//             top: 50%;
+//             left: 14%;
+//             width: 70%;
+//             z-index: 999;
+
+//             .p-tabview .p-tabview-nav {
+//                 border: none;
+//                 border-width: none;
+//                 font-family: $regular-font;
+//                 font-weight: 400;
+//             }
+
+//             .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+//                 background: $lightbrown;
+//                 color: $whiteColor;
+//                 font-family: $regular-font;
+//                 font-weight: 400;
+//                 font-size: $sz-20-font;
+//                 border-radius: 10px;
+//             }
+
+//             .p-tabview-title {
+//                 width: 50px;
+//                 text-align: center;
+//                 line-height: 0;
+//             }
+
+//             .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+//                 background-color: $dropdownbg;
+//                 color: $lightbrown;
+//                 transition: none;
+//                 border-radius: 10px;
+//                 line-height: 0;
+//                 margin-right: 10px
+//             }
+
+//             .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+//                 box-shadow: none;
+//             }
+
+//             .p-tabview-nav-link :hover {
+//                 background-color: $dropdownbg;
+//             }
+
+//             .p-checkbox .p-checkbox-box.p-highlight {
+//                 border-color: $lightbrown;
+//                 background: $lightbrown;
+//             }
+
+//             .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+//                 border-color: $lightbrown;
+//             }
+
+//             .p-checkbox .p-checkbox-box {
+//                 border: 1px solid $lightbrown;
+//                 border-color: $lightbrown;
+//             }
+
+//             .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
+//                 box-shadow: none;
+//             }
+//         }
+
+//         .p-card .p-card-content {
+//             padding: 0;
+//             //    height: 220px;
+//         }
+
+//         .mainContainer {
+//             .dataviewContainer {
+//                 .p-tabview .p-tabview-panels {
+//                     padding: 0;
+//                 }
+
+//                 .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+//                     border: none;
+//                     background: $lightbrown;
+//                     font-family: $regular-font;
+//                     color: $whiteColor;
+//                     padding: 10px 25px;
+//                     font-weight: 400;
+//                     font-size: $sz-20-font;
+//                     border-top-right-radius: 0px;
+//                     border-top-left-radius: 0px;
+//                 }
+
+//                 .p-tabview-nav-content {
+//                     border: 1px solid $paleColor;
+//                     border-radius: 17px;
+//                 }
+
+//                 .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+//                     background: $paleColor;
+//                     border-color: $paleColor;
+//                     font-family: $regular-font;
+//                     color: $lightbrown;
+//                     border-radius: 17px;
+//                     //box-shadow:2px 2px 5px 2px rgba(44, 44, 44, 0.562);
+//                 }
+
+//                 .p-tabview .p-tabview-nav li:not(.p-highlight):not(.p-disabled):hover .p-tabview-nav-link {
+//                     background: $paleColor;
+//                     border-color: $paleColor;
+//                     color: $lightbrown;
+//                     border-radius: 17px;
+//                 }
+
+//                 .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+//                     box-shadow: none;
+//                 }
+
+//                 .p-tabview-nav-container {
+//                     position: relative;
+//                     margin: 20px 60px;
+//                 }
+
+//                 .p-tabview .p-tabview-nav {
+//                     background: none;
+//                     border: none;
+//                 }
+
+//                 .p-dropdown {
+//                     margin: 20px 60px;
+//                     width: 128px;
+//                     border: 1px solid $paleColor;
+//                 }
+
+//                 .p-dropdown .p-dropdown-label {
+//                     background-color: $lightbrown;
+//                     color: $whiteColor;
+//                     font-family: $regular-font;
+//                     font-weight: 400;
+//                     padding: 8px 10px;
+
+//                 }
+
+//                 .p-dropdown .p-dropdown-trigger {
+//                     background-color: $lightbrown;
+//                     color: $whiteColor;
+//                 }
+
+//                 .p-dropdown:not(.p-disabled):hover {
+//                     border-color: $paleColor;
+//                 }
+
+//                 .p-dropdown:not(.p-disabled).p-focus {
+//                     box-shadow: none !important;
+//                 }
+
+//                 .propertyListingContainer .mainContainer .dataviewContainer .p-dropdown-panel .p-dropdown-items .p-dropdown-item:hover {
+//                     background-color: $paleColor;
+//                     color: $darkbrown;
+//                 }
+
+//                 p-overlay.p-element.ng-tns-c56-0.ng-star-inserted {
+//                     z-index: 99999999;
+//                 }
+
+//                 .p-inputtext {
+//                     border-radius: 5px 0px 0px 5px;
+//                 }
+
+//                 // .p-dropdown-panel .p-dropdown-items .p-dropdown-item { background-color: $lightbrown; color:$whiteColor;}
+//                 .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+//                     font-family: $regular-font;
+//                 }
+
+//                 .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+//                     background-color: $paleColor;
+//                     color: $whiteColor;
+//                 }
+//             }
+
+//             .gridContainer {
+//                 .btn1 {
+//                     button.p-element.p-button.p-component {
+//                         height: 30px;
+//                         border-radius: 10px;
+//                         padding: 15px 12px;
+//                         background-color: $opaquePale;
+//                         color: $whiteColor;
+//                         font-size: $sz-18-font;
+//                         border: 1px solid transparent;
+//                         border-color: none;
+//                         transition: all .6s ease-in-out;
+//                     }
+//                 }
+
+//                 .btn2 {
+//                     button.p-element.p-button.p-component {
+//                         border-radius: 10px;
+//                         background-color: $paleColor;
+//                         color: $darkbrown;
+//                         font-size: $sz-18-font;
+//                         border: 1px solid transparent;
+//                         padding: 8px 16px;
+//                         letter-spacing: 1px;
+//                         transition: all .6s ease-in-out;
+//                     }
+//                 }
+
+//                 .p-button:focus {
+//                     box-shadow: none;
+//                 }
+
+//                 .p-button:focus {
+//                     box-shadow: none;
+//                 }
+
+//                 button.p-element.p-button.p-component:hover {
+//                     background-color: $mediumbrown;
+//                     color: $whiteColor;
+//                     transition: all .6s ease-in-out;
+//                     transition-duration: 0.5s;
+//                     transition-timing-function: ease-in-out;
+//                     transition-delay: 0s;
+//                     transition-property: all;
+//                 }
+//             }
+
+//             .cardContainer {
+//                 .p-slider.p-slider-horizontal {
+//                     margin: 15px;
+//                 }
+
+//                 .p-button:focus {
+//                     box-shadow: none !important;
+//                 }
+
+//                 .p-inputtext:enabled:focus {
+//                     box-shadow: none !important;
+//                     border-color: $darkbrown;
+//                 }
+
+//                 .p-inputtext.p-inputtext-sm {
+//                     border-color: $blackColor;
+//                 }
+
+//                 .p-inputtext:enabled:hover {
+//                     border-color: $blackColor;
+//                 }
+
+//                 .p-slider .p-slider-handle {
+//                     border: 2px solid $darkbrown;
+//                 }
+
+//                 .p-slider .p-slider-handle:focus {
+//                     box-shadow: none !important;
+//                 }
+
+//                 .p-slider:not(.p-disabled) .p-slider-handle:hover {
+//                     background: $darkbrown;
+//                     border-color: $darkbrown;
+//                 }
+
+//                 .p-slider .p-slider-range {
+//                     background: $darkbrown;
+//                 }
+
+//                 .p-dropdown {
+//                     width: 60%;
+//                 }
+
+//                 input.ng-invalid.ng-touched {
+//                     border: 1px solid $validateColor;
+//                 }
+
+//                 p-dropdown.ng-invalid.ng-touched {
+//                     .p-dropdown.p-component {
+//                         border: 1px solid $validateColor;
+//                     }
+//                 }
+
+//                 .inputs input::placeholder {
+//                     color: $darkbrown;
+//                 }
+
+//                 .p-inputtext.p-inputtext-sm {
+//                     color: $darkbrown;
+//                     font-family: $regular-font;
+//                 }
+
+//                 .p-dropdown.p-component {
+//                     border-color: $blackColor;
+//                     color: $darkbrown;
+//                     width: 100%;
+//                 }
+
+//                 .p-dropdown.p-component:hover {
+//                     border-color: $blackColor;
+//                 }
+
+//                 .p-dropdown.p-inputwrapper-focus {
+//                     border-color: transparent !important
+//                 }
+
+//                 // .p-dropdown-panel .p-dropdown-items .p-dropdown-item { background-color: $darkbrown; color:$whiteColor;}
+//                 .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+//                     background-color: $paleColor;
+//                     color: $whiteColor;
+//                 }
+
+//                 .p-dropdown .p-dropdown-label {
+//                     color: $darkbrown !important;
+//                     font-family: $regular-font;
+//                 }
+
+//                 .p-focus {
+//                     border-color: $darkbrown;
+//                 }
+
+//                 span.p-dropdown-trigger-icon.pi.pi-chevron-down {
+//                     color: $darkbrown;
+//                 }
+
+//                 .p-dropdown:not(.p-disabled).p-focus {
+//                     box-shadow: none !important;
+//                     border-color: $darkbrown !important;
+//                 }
+
+//                 .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+//                     font-family: $regular-font;
+//                 }
+//             }
+//         }
+
+
+//         ul.ngx-pagination {
+//             padding: 0;
+//         }
+
+//         // li.pagination-previous {
+//         //     position: relative;
+//         // }
+//         // li.pagination-previous:before{
+//         //     content: '<' !important;
+//         //     position: absolute;
+//         //     top:0px;
+//         //     left:0px;
+//         // }
+
+//         // li.pagination-next {
+//         //     position: relative;
+//         // }
+//         // li.pagination-next:before{
+//         //     content: '>' !important;
+//         //     position: absolute;
+//         //     top:0px;
+//         //     left:0px;
+//         // }
+
+//         .ngx-pagination li.pagination-previous a {
+//             color: transparent;
+//         }
+
+//         .ngx-pagination li .pagination-next a {
+//             color: transparent;
+//         }
+
+//         pagination-controls {
+//             display: flex;
+//             justify-content: center;
+//         }
+
+//         .ngx-pagination .current {
+//             padding: 10px 18px !important;
+//             background: $paleColor !important;
+//             color: $darkbrown !important;
+//             border-radius: 10px;
+//         }
+
+//         .ngx-pagination a,
+//         .ngx-pagination button {
+//             color: $paleColor !important;
+//         }
+
+//         .ngx-pagination a:hover,
+//         .ngx-pagination button:hover {
+//             background: $lightbrown !important;
+//             color: $paleColor !important;
+//             border-radius: 10px;
+//             padding: 10px !important;
+//         }
+//     }
+// }
+
+
+
+
+//Responsiveness------------------------------------------------------------------------>>>>>>>>>>>>>>>>>
+// @media only screen and (min-width:4501px) and (max-width: 6000px) {
+
+//     /*25*/
+//     .cardContainer {
+//         max-width: 1250px !important;
+//         --bs-gutter-x: 1.5rem;
+//         --bs-gutter-y: 0;
+//         width: 100%;
+//         padding-right: calc(var(--bs-gutter-x) * .5);
+//         padding-left: calc(var(--bs-gutter-x) * .5);
+//         margin-right: auto;
+//         margin-left: auto;
+//     }
+
+//     .contentContainer {
+//         max-width: 1250px !important;
+//         --bs-gutter-x: 1.5rem;
+//         --bs-gutter-y: 0;
+//         width: 100%;
+//         padding-right: calc(var(--bs-gutter-x) * .5);
+//         padding-left: calc(var(--bs-gutter-x) * .5);
+//         margin-right: auto;
+//         margin-left: auto;
+//     }
+// }
+
+// @media only screen and (min-width:3100px) and (max-width: 4500px) {
+
+//     /*33%*/
+//     .cardContainer {
+//         max-width: 1250px !important;
+//         --bs-gutter-x: 1.5rem;
+//         --bs-gutter-y: 0;
+//         width: 100%;
+//         padding-right: calc(var(--bs-gutter-x) * .5);
+//         padding-left: calc(var(--bs-gutter-x) * .5);
+//         margin-right: auto;
+//         margin-left: auto;
+//     }
+
+//     .contentContainer {
+//         max-width: 1250px !important;
+//         --bs-gutter-x: 1.5rem;
+//         --bs-gutter-y: 0;
+//         width: 100%;
+//         padding-right: calc(var(--bs-gutter-x) * .5);
+//         padding-left: calc(var(--bs-gutter-x) * .5);
+//         margin-right: auto;
+//         margin-left: auto;
+//     }
+// }
+
+// @media only screen and (min-width:2701px) and (max-width: 3100px) {
+
+//     /*50%*/
+//     .cardContainer {
+//         max-width: 1250px !important;
+//         --bs-gutter-x: 1.5rem;
+//         --bs-gutter-y: 0;
+//         width: 100%;
+//         padding-right: calc(var(--bs-gutter-x) * .5);
+//         padding-left: calc(var(--bs-gutter-x) * .5);
+//         margin-right: auto;
+//         margin-left: auto;
+//     }
+
+//     .contentContainer {
+//         max-width: 1250px !important;
+//         --bs-gutter-x: 1.5rem;
+//         --bs-gutter-y: 0;
+//         width: 100%;
+//         padding-right: calc(var(--bs-gutter-x) * .5);
+//         padding-left: calc(var(--bs-gutter-x) * .5);
+//         margin-right: auto;
+//         margin-left: auto;
+//     }
+// }
+
+// @media only screen and (min-width:2001px) and (max-width: 2700px) {
+
+//     /*67%*/
+//     .cardContainer {
+//         max-width: 1250px !important;
+//         --bs-gutter-x: 1.5rem;
+//         --bs-gutter-y: 0;
+//         width: 100%;
+//         padding-right: calc(var(--bs-gutter-x) * .5);
+//         padding-left: calc(var(--bs-gutter-x) * .5);
+//         margin-right: auto;
+//         margin-left: auto;
+//     }
+
+//     .contentContainer {
+//         max-width: 1250px !important;
+//         --bs-gutter-x: 1.5rem;
+//         --bs-gutter-y: 0;
+//         width: 100%;
+//         padding-right: calc(var(--bs-gutter-x) * .5);
+//         padding-left: calc(var(--bs-gutter-x) * .5);
+//         margin-right: auto;
+//         margin-left: auto;
+//     }
+// }
+
+// @media only screen and (min-width: 1801px) and (max-width: 2000px) {
+
+//     /*75%*/
+//     .cardContainer {
+//         max-width: 1250px !important;
+//         --bs-gutter-x: 1.5rem;
+//         --bs-gutter-y: 0;
+//         width: 100%;
+//         padding-right: calc(var(--bs-gutter-x) * .5);
+//         padding-left: calc(var(--bs-gutter-x) * .5);
+//         margin-right: auto;
+//         margin-left: auto;
+//     }
+
+//     .contentContainer {
+//         max-width: 1250px !important;
+//         --bs-gutter-x: 1.5rem;
+//         --bs-gutter-y: 0;
+//         width: 100%;
+//         padding-right: calc(var(--bs-gutter-x) * .5);
+//         padding-left: calc(var(--bs-gutter-x) * .5);
+//         margin-right: auto;
+//         margin-left: auto;
+//     }
+// }
+
+// @media only screen and (min-width:1601px) and (max-width: 1800px) {
+
+//     /*80%*/
+//     .cardContainer {
+//         max-width: 1250px !important;
+//         --bs-gutter-x: 1.5rem;
+//         --bs-gutter-y: 0;
+//         width: 100%;
+//         padding-right: calc(var(--bs-gutter-x) * .5);
+//         padding-left: calc(var(--bs-gutter-x) * .5);
+//         margin-right: auto;
+//         margin-left: auto;
+//     }
+
+//     .contentContainer {
+//         max-width: 1250px !important;
+//         --bs-gutter-x: 1.5rem;
+//         --bs-gutter-y: 0;
+//         width: 100%;
+//         padding-right: calc(var(--bs-gutter-x) * .5);
+//         padding-left: calc(var(--bs-gutter-x) * .5);
+//         margin-right: auto;
+//         margin-left: auto;
+//     }
+// }
+
+// @media only screen and (min-width:1517px) and (max-width: 1600px) {
+//     /*90%*/
+
+// }
+
+// @media (max-width:1270px) {
+//     .mainContainer {
+//         .cardContainer {
+//             .card {
+//                 .inputs {
+//                     .column1 {
+//                         padding: 0;
+
+//                         .row2 {
+//                             width: 100% !important;
+//                         }
+//                     }
+
+//                     .column2 {
+//                         display: flex;
+//                         justify-content: flex-start !important;
+//                         padding: 0px;
+
+//                         .row2 {
+//                             padding: 0;
+//                         }
+
+//                         .row3 {
+//                             padding: 10px;
+//                         }
+//                     }
+//                 }
+//             }
+
+//             .slider {
+//                 width: 90% !important;
+//                 bottom: 24%;
+//                 left: 24px;
+//             }
+//         }
+
+//         .dataviewContainer {
+//             display: block !important;
+//         }
+
+//         .gridContainer {
+//             grid-template-columns: 1fr 1fr !important;
+//         }
+
+//     }
+// }
+
+// @media (max-width:1199px) {
+//     ::ng-deep .propertyListingContainer {
+//         .p-card {
+//             left: 0%;
+//             width: 100%;
+//         }
+
+//         .p-tabview-nav-container {
+//             margin: 25px 0px !important;
+//         }
+
+//         .dataviewContainer .p-dropdown {
+//             margin: 25px 0px !important;
+//             width: 200px !important;
+//         }
+//     }
+// }
+
+// @media (max-width:1199px) {
+//     .mainContainer {
+//         .header {
+//             padding: 0px !important;
+//         }
+
+//         .cardContainer {
+//             .listPropertycard {
+//                 .column2 {
+//                     .row2 {
+//                         padding: 0px 10px;
+//                     }
+
+//                     .row3 {
+//                         padding: 0px;
+//                     }
+//                 }
+//             }
+//         }
+
+//         .gridContainer {
+//             grid-template-columns: 1fr 1fr !important;
+//             padding: 0px !important;
+
+//             .card-15 {
+//                 display: none;
+//             }
+//         }
+//     }
+// }
+
+// @media (max-width:991px) {
+//     .sliderContainer {
+//         .sliderImage {
+//             img {
+//                 height: 300px !important;
+//             }
+//         }
+//     }
+
+//     .cardContainer {
+//         .listPropertycard {
+//             .column2 {
+//                 .row2 {
+//                     right: 0px !important;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media (max-width:930px) {
+//     .mainContainer {
+//         .cardContainer {
+//             .listPropertycard {
+//                 top: 50%;
+//                 left: 0%;
+//                 width: 100% !important;
+//             }
+//         }
+
+//         .gridContainer {
+//             grid-template-columns: 1fr !important;
+
+//             .card-15 {
+//                 display: block !important;
+//             }
+//         }
+
+//         .column2 {
+//             .row3 {
+//                 width: 35%;
+//             }
+//         }
+//     }
+// }
+
+// @media (max-width: 767px) {
+//     .mainContainer {
+//         padding: 25px !important;
+
+//         .cardContainer {
+//             max-height: 100% !important;
+
+//             .column1,
+//             .column2 {
+//                 padding: 0px !important;
+//             }
+
+//             .slider {
+//                 width: 95% !important;
+//                 bottom: 24%;
+//                 left: 10px;
+//             }
+//         }
+
+//         .contentContainer {
+//             padding: 20px 0px !important;
+//         }
+//     }
+
+//     ::ng-deep {
+//         .column1 {
+//             display: block !important;
+
+//             .row1,
+//             .row2 {
+//                 width: 100% !important;
+//             }
+//         }
+
+//         .column2 {
+//             display: block !important;
+
+//             .row2 {
+//                 padding: 10px !important;
+//             }
+
+//             .row3 {
+//                 width: 100% !important;
+//                 padding: 10px !important;
+//             }
+//         }
+//     }
+
+//     ::ng-deep {
+//         .propertyListingContainer .mainContainer .cardContainer .p-dropdown {
+//             width: 100% !important;
+//         }
+//     }
+
+//     ::ng-deep {
+//         .propertyListingContainer {
+//             .p-card {
+//                 transform: translateY(0%);
+//                 top: 0%;
+//                 left: 0%;
+//             }
+
+//             .p-card .p-card-content {
+//                 height: 100%;
+//             }
+//         }
+//     }
+// }
+
+// @media (max-width:640px) {
+//     .mainContainer {
+//         .gridContainer {
+//             padding: 0 !important;
+
+//             .card {
+//                 margin: 12px 0px !important;
+//             }
+//         }
+//     }
+
+
+// }
+
+// @media (max-width:480px) {
+
+//     // ::ng-deep{     
+//     //     .column1{
+//     //         display: block !important;
+//     //             .row1, .row2{
+//     //                 width:100% !important;
+//     //             }
+//     //         }         
+//     //     .column2{
+//     //         display: block !important;
+//     //         .row2{
+//     //             padding:10px !important;
+//     //         }
+//     //         .row3{
+//     //             width: 100% !important;
+//     //             padding:10px !important;
+//     //         }
+//     //     }
+//     // }
+//     .propertyListingContainer {
+//         .whatsappContainer {
+//             .whatsapp {
+//                 height: 50px;
+//             }
+//         }
+//     }
+// }
+
+// @media (max-width:375px) {}
+
+
+
+// .propertyListingContainer[_ngcontent-moa-c91] .cardContainer[_ngcontent-moa-c91] .listPropertycard[_ngcontent-moa-c91] .inputs[_ngcontent-moa-c91] .column2[_ngcontent-moa-c91] .row3[_ngcontent-moa-c91] .btn2[_ngcontent-moa-c91] {
+//     display: flex;
+//     justify-content: center;
+//     background-color: #655252;
+//     color: White;
+//     font-size: 13px;
+//     letter-spacing: 1px;
+//     height: 45px;
+//     border: 1px solid transparent;
+//     border-radius: 12px;
+// }
+// .propertyListingContainer[_ngcontent-moa-c91] .cardContainer[_ngcontent-moa-c91] .listPropertycard[_ngcontent-moa-c91] .inputs[_ngcontent-moa-c91] .column2[_ngcontent-moa-c91] .row2[_ngcontent-moa-c91] .btn1[_ngcontent-moa-c91] {
+//     display: flex;
+//     justify-content: space-between;
+//     background-color: rgba(108, 91, 91, 0.2784313725);
+//     color: #574142;
+//     font-size: 16px;
+//     height: 45px;
+//     border: 1px solid transparent;
+// }
+// .propertyListingContainer[_ngcontent-moa-c91] .cardContainer[_ngcontent-moa-c91] .listPropertycard[_ngcontent-moa-c91] .inputs[_ngcontent-moa-c91] .column1[_ngcontent-moa-c91] .row2[_ngcontent-moa-c91] {
+//     width: 100% !important;
+// }
+
+// @media (max-width: 425px) {
+//     .propertyListingContainer {
+//         .searchContainer {
+//             .propertySearch {
+//                 width: 95%;
+
+//                 .row1 {
+//                     .section2 {
+//                         min-width: 100% !important;
+//                     }
+
+//                     .section3 {
+//                         .sizeContainer {
+//                             flex-wrap: wrap;
+//                             row-gap: 10px;
+
+//                             .rangeSpan {
+//                                 display: none;
+//                             }
+//                         }
+//                     }
+//                 }
+
+//                 .row5 {
+//                     column-gap: 5px;
+//                 }
+
+//             }
+//         }
+//     }
+// }
+
+// @media (max-width: 640px) {
+//     .propertyListingContainer {
+//         .searchContainer {
+//             .propertySearch {
+//                 .row1 {
+//                     .section2 {
+//                         min-width: unset;
+//                     }
+
+//                     // .section3 {
+//                     //     .sizeContainer {
+//                     //         // flex-wrap: wrap;
+
+//                     //         // p-dropdown.p-element {
+//                     //         //     min-width: unset;
+//                     //         //     max-width: unset;
+
+//                     //         // }
+//                     //     }
+//                     // }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media (max-width: 720px) {
+//     .propertyListingContainer {
+//         .searchContainer {
+//             .propertySearch {
+//                 .row2 {
+//                     .section2 {
+//                         min-width: 100%;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media (min-width: 1120px) {
+//     .propertyListingContainer {
+//         .searchContainer {
+//             .propertySearch {
+//                 .row1 {
+//                     .section2 {
+//                         min-width: 180px;
+//                     }
+
+
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+@media (max-width:500px) {
+    .propertyListingContainer {
+        .mainContainer {
+            padding: 0 0 50px 0px;
+
+            .contentContainer {
+                .sectionHeader {
+                    padding: 0 15px;
+                }
+
+                .gridContainer {
+                    padding: 30px 0px;
+                }
+            }
+        }
+    }
+}

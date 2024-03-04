@@ -1,0 +1,255 @@
+<div class="homeContainer">
+    <div class="whatsappContainer" *ngFor="let wp of whatsapp">
+      <a href="https://web.whatsapp.com"
+        ><img class="whatsapp" src="{{ wp.img }}"
+      /></a>
+    </div>
+  
+    <!-- NAVIGATION STARTS -->
+    <!-- <app-navbar></app-navbar> -->
+  
+    <!-- SLIDER STARTS -->
+    <div class="slideContainer">
+      <div class="slideSubContainer">
+        <div class="cardContainer">
+          <div class="slideCard" *ngFor="let slider of homeSlider">
+            <div class="slideImg">
+              <img
+                (click)="navigateTo(slider)"
+                class="slideImg"
+                src="{{ slider.image }}"
+              />
+              <h3>{{ slider.header }}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- CONTENT-1 STARTS -->
+    <div class="contentOneContainer" *ngFor="let c1 of content1">
+      <div class="contentOneSubContainer">
+        <div class="header" *ngFor="let hd of header">
+          <div class="headerImg">
+            <!-- <img src="{{ hd.headerImg }}" /> -->
+          </div>
+          <div class="headerTitle">
+            <h4>{{ hd.subHeader1 }}</h4>
+            <h1>{{ hd.mainHeader1 }}</h1>
+          </div>
+        </div>
+        <div class="headerCont">
+          <div class="colm-2">
+            <div class="card2">
+              <div class="status1">
+                <!-- <p class="text1">{{c1.p1}}</p> -->
+                <p class="text2">{{ c1.p1 }}</p>
+              </div>
+              <img class="pic2" src="{{ c1.img2 }}" />
+              <div class="status2">
+                <div class="perspective_overlay"></div>
+                <div class="text3">
+                  <h1>{{ c1.header2 }}</h1>
+                  <p><img src="{{ c1.location }}" /> {{ c1.locName2 }}</p>
+                </div>
+                <div class="text4">
+                  <h1>{{ c1.amt2 }}</h1>
+                </div>
+              </div>
+            </div>
+            <div class="card3">
+              <div class="status1">
+                <!-- <p class="text1">{{c1.p1}}</p> -->
+                <p class="text2">{{ c1.p2 }}</p>
+              </div>
+              <img class="pic3" src="{{ c1.img3 }}" />
+              <div class="status2">
+                <div class="perspective_overlay"></div>
+                <div class="text3">
+                  <h1>{{ c1.header3 }}</h1>
+                  <p><img src="{{ c1.location }}" /> {{ c1.locName3 }}</p>
+                </div>
+                <div class="text4">
+                  <h1>{{ c1.amt3 }}</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card1">
+            <div class="status1">
+              <p class="text2">{{ c1.p2 }}</p>
+            </div>
+            <img class="pic1" src="{{ c1.img1 }}" />
+            <div class="status2">
+              <div class="perspective_overlay"></div>
+              <div class="text3">
+                <h1>{{ c1.header1 }}</h1>
+                <p><img src="{{ c1.location }}" /> {{ c1.locName1 }}</p>
+              </div>
+              <div class="text4">
+                <h1>{{ c1.amt1 }}</h1>
+              </div>
+            </div>
+          </div>
+          <div class="colm-3">
+            <div class="card4">
+              <div class="status1">
+                <!-- <p class="text1">{{c1.p1}}</p> -->
+                <p class="text2">{{ c1.p2 }}</p>
+              </div>
+              <img class="pic4" src="{{ c1.img4 }}" />
+              <div class="status2">
+                <div class="perspective_overlay"></div>
+                <div class="text3">
+                  <h1>{{ c1.header4 }}</h1>
+                  <p><img src="{{ c1.location }}" /> {{ c1.locName4 }}</p>
+                </div>
+                <div class="text4">
+                  <h1>{{ c1.amt4 }}</h1>
+                </div>
+              </div>
+            </div>
+            <div class="card5">
+              <div class="status1">
+                <!-- <p class="text1">{{c1.p1}}</p> -->
+                <p class="text2">{{ c1.p1 }}</p>
+              </div>
+              <img class="pic5" src="{{ c1.img5 }}" />
+              <div class="status2">
+                <div class="perspective_overlay"></div>
+                <div class="text3">
+                  <h1>{{ c1.header5 }}</h1>
+                  <p><img src="{{ c1.location }}" /> {{ c1.locName5 }}</p>
+                </div>
+                <div class="text4">
+                  <h1>{{ c1.amt5 }}</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- CONTENT-2 STARTS -->
+    <div class="contentTwoContainer" *ngFor="let c2 of content2">
+      <div class="contentTwoSubContainer">
+        <div class="headerOtr" *ngFor="let hd of header">
+          <div class="header">
+            <div class="headerImg">
+              <!-- <img src="{{ hd.headerImg }}" /> -->
+            </div>
+            <div class="headerTitle">
+              <h4>{{ hd.subHeader2 }}</h4>
+              <h1>{{ hd.mainHeader2 }}</h1>
+            </div>
+          </div>
+  
+          <div class="headerDropdown">
+            <p-dropdown
+              [options]="dropdownValue"
+              [(ngModel)]="selectedValue"
+              optionLabel="name"
+            ></p-dropdown>
+          </div>
+        </div>
+        <div class="headerCont">
+          <div class="colm-2">
+            <div class="card2">
+              <div class="status1">
+                <!-- <p class="text1">{{c1.p1}}</p> -->
+                <p class="text2">{{ c2.p1 }}</p>
+              </div>
+              <img class="pic2" src="{{ c2.img2 }}" />
+              <div class="status2">
+                <div class="perspective_overlay"></div>
+                <div class="text3">
+                  <h1>{{ c2.header2 }}</h1>
+                  <p><img src="{{ c2.location }}" /> {{ c2.locName2 }}</p>
+                </div>
+                <div class="text4">
+                  <h1>{{ c2.amt2 }}</h1>
+                </div>
+              </div>
+            </div>
+            <div class="card3">
+              <div class="status1">
+                <!-- <p class="text1">{{c1.p1}}</p> -->
+                <p class="text2">{{ c2.p2 }}</p>
+              </div>
+              <img class="pic3" src="{{ c2.img3 }}" />
+              <div class="status2">
+                <div class="perspective_overlay"></div>
+                <div class="text3">
+                  <h1>{{ c2.header3 }}</h1>
+                  <p><img src="{{ c2.location }}" /> {{ c2.locName3 }}</p>
+                </div>
+                <div class="text4">
+                  <h1>{{ c2.amt3 }}</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card1">
+            <div class="status1">
+              <p class="text2">{{ c2.p2 }}</p>
+            </div>
+            <img class="pic1" src="{{ c2.img1 }}" />
+            <div class="status2">
+              <div class="perspective_overlay"></div>
+              <div class="text3">
+                <h1>{{ c2.header1 }}</h1>
+                <p><img src="{{ c2.location }}" /> {{ c2.locName1 }}</p>
+              </div>
+              <div class="text4">
+                <h1>{{ c2.amt1 }}</h1>
+              </div>
+            </div>
+          </div>
+          <div class="colm-3">
+            <div class="card4">
+              <div class="status1">
+                <!-- <p class="text1">{{c1.p1}}</p> -->
+                <p class="text2">{{ c2.p2 }}</p>
+              </div>
+              <img class="pic4" src="{{ c2.img4 }}" />
+              <div class="status2">
+                <div class="perspective_overlay"></div>
+                <div class="text3">
+                  <h1>{{ c2.header4 }}</h1>
+                  <p><img src="{{ c2.location }}" /> {{ c2.locName4 }}</p>
+                </div>
+                <div class="text4">
+                  <h1>{{ c2.amt4 }}</h1>
+                </div>
+              </div>
+            </div>
+            <div class="card5">
+              <div class="status1">
+                <!-- <p class="text1">{{c1.p1}}</p> -->
+                <p class="text2">{{ c2.p1 }}</p>
+              </div>
+              <img class="pic5" src="{{ c2.img5 }}" />
+              <div class="status2">
+                <div class="perspective_overlay"></div>
+                <div class="text3">
+                  <h1>{{ c2.header5 }}</h1>
+                  <p><img src="{{ c2.location }}" /> {{ c2.locName5 }}</p>
+                </div>
+                <div class="text4">
+                  <h1>{{ c2.amt5 }}</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- FOOTER STARTS -->
+    <!-- <app-footer></app-footer> -->
+  </div>
+  <!-- <router-outlet></router-outlet> -->
+  
+  <p-confirmPopup></p-confirmPopup>
+  

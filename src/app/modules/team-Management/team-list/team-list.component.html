@@ -1,0 +1,38 @@
+<div class="teamContainer">
+    <div class="whatsappContainer" *ngFor="let wp of whatsapp">
+      <a href="https://web.whatsapp.com"
+        ><img class="whatsapp" src="{{ wp.img }}"
+      /></a>
+    </div>
+  
+    <!--CONTENT STARTS -->
+    <div class="mainContainer">
+      <div class="subContainer">
+        <div class="header">
+          <div class="headerImg">
+            <img src="{{ gridHeader.headerimg }}" />
+          </div>
+          <div class="headerTitle">
+            <h4>{{ gridHeader.header1 }}</h4>
+            <h1>{{ gridHeader.header2 }}</h1>
+          </div>
+        </div>
+        <div class="gridContainer">
+          <div class="grid" *ngFor="let gd of grid | paginate : { itemsPerPage: 12, currentPage: p }">
+            <img src="{{ gd.image }}" />
+            <div class="gridDetails">
+              <h2>{{ gd.text }}</h2>
+              <p>{{ gd.role }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <pagination-controls
+        [previousLabel]="''"
+        [nextLabel]="''"
+        (pageChange)="p = $event">
+      </pagination-controls>
+    </div>
+  
+  </div>
+  

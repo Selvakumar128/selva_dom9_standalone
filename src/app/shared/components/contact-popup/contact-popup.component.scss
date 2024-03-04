@@ -1,0 +1,366 @@
+@import '../../../../assets/theme/theme-variable.scss';
+
+
+
+.contactPopupContainer {
+
+    .card {
+        form {
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+
+        h3 {
+            text-align: left;
+            line-height: 30px;
+            margin: 0px;
+        }
+
+        .additionalInfo {
+            display: flex;
+            justify-content: space-between;
+            margin-block: 4px;
+            flex-wrap: wrap;
+            gap: 5px 12px;
+
+            .id {
+                color: $secondaryColor;
+            }
+
+            .type {
+                padding-right: 35px;
+            }
+        }
+
+        .inputs {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 15px 20px 25px 20px;
+            width: 100%;
+
+
+
+            .column1 {
+                width: 50%;
+                // padding-left: 15px;
+
+                .phnInput {
+
+                    width: 95%;
+                    background-color: $whiteColor;
+                    margin: 10px 0px;
+                    border-radius: 10px;
+                    position: relative;
+                    color: $ph;
+
+                }
+            }
+
+            .column2 {
+                width: 50%;
+            }
+        }
+
+        .radioGroup {
+            margin-top: 10px;
+            display: flex;
+            column-gap: 40px;
+
+            .radio {
+                display: flex;
+                column-gap: 20px;
+                align-items: center;
+
+
+            }
+        }
+
+        .btn {
+            text-align: center;
+        }
+
+        .formInfoOtr {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 15px;
+
+            .formInfo {
+                display: flex
+            }
+
+            .info {
+                font-family: $regular-font;
+                font-weight: 600;
+                color: $blackColor;
+            }
+        }
+    }
+}
+
+
+
+::ng-deep {
+    // styles added for new phone number package by Selva on 01/03/2023
+    angular-phone-number-input.phoneNumber {
+        color: $blackColor;
+    }
+    .wrap.flex.align-center.border {
+        background-color: $dropdownbg;
+        border: 1px solid $border;
+        padding: 0 0 0 8px;
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+    }
+    span.text.ml-5 {
+        color: $blackColor;
+        margin-right: 10px;
+    }
+    input.input-box.text {
+        color: $blackColor;
+        height: 100%;
+        border-radius: 0px 10px 10px 0px;
+    }   
+    .error{
+        border: 1px solid $error !important;
+    }
+    input.p-inputtext-sm.ng-dirty.ng-valid.ng-touched {
+        font-family: "helvetica";
+        width: 95%;
+        height: 40px;
+        // background-color: #E6DDCC;
+        border: 1px solid $border;
+        margin: 10px 0px;
+        padding: 0px 15px;
+        border-radius: 10px;
+        position: relative;
+        color: $blackColor;
+    }
+    input.p-inputtext-sm {
+        /* width: 100%; */
+        font-family: "helvetica";
+        width: 95%;
+        height: 40px;
+        // background-color: #E6DDCC;
+        border: 1px solid $border;
+        margin: 10px 0px;
+        padding: 0px 15px;
+        border-radius: 10px;
+        position: relative;
+        color: $blackColor;
+    }
+    .contactPopupContainer .ng-invalid.ng-touched {
+        border-color: $error!important;
+        width: 95%;
+        background-color: $whiteColor;
+        margin: 10px 0px;
+        border-radius: 10px;
+        position: relative;
+        color: $secondaryColor;
+        height: 40px;
+        padding: 0px 15px;
+    }
+    .contactPopupContainer {
+        .card {
+            .p-card {
+                font-family: $regular-font;
+                background-color: $whiteColor;
+                color: $blackColor;
+                box-shadow: none !important;
+            }
+
+            .p-card .p-card-content {
+                padding: 0 !important;
+            }
+
+            .p-card .p-card-body {
+                padding: 0px 0px 25px 0px !important;
+            }
+
+            .p-inputtext.p-inputtext-sm {
+                width: 95%;
+                background-color: $whiteColor;
+                margin: 10px 0px;
+                border-radius: 10px;
+                position: relative;
+                color: $ph;
+            }
+
+            .p-button {
+                font-family: $regular-font;
+                font-size: $sz-18-font;
+                background-color: $secondaryColor;
+                border: 1px solid transparent;
+                color: $primaryColor;
+                border-radius: 8px;
+                padding: 8px 25px;
+                position: relative;
+                text-align: center;
+                transition: all .6s ease-in-out;
+            }
+
+            .p-button:focus {
+                box-shadow: none;
+            }
+
+            .p-button:enabled:hover {
+                background-color: $hoverBrown;
+                color: $whiteColor;
+                border: 1px solid $hoverBrown;
+                transition: all .6s ease-in-out;
+                transition-duration: 0.5s;
+                transition-timing-function: ease-in-out;
+                transition-delay: 0s;
+                transition-property: all;
+            }
+
+            .p-button:enabled:active {
+                background-color: $hoverBrown;
+                border: 1px solid $secondaryColor;
+            }
+
+            .p-inputtext:enabled:focus {
+                border: 1px solid $hoverBrown;
+                box-shadow: 0 0 0 $secondaryColor;
+            }
+
+            .p-inputtext:enabled:hover {
+                border-color: $inputBorder;
+            }
+
+            .iti--allow-dropdown input,
+            .iti--allow-dropdown input[type=text],
+            .iti--allow-dropdown input[type=tel],
+            .iti--separate-dial-code input,
+            .iti--separate-dial-code input[type=text],
+            .iti--separate-dial-code input[type=tel] {
+                border-radius: 10px;
+                padding: 11px 55px;
+                width: 100%;
+                border: 1px solid $inputBorder;
+            }
+
+            .iti--allow-dropdown input:focus-visible {
+                outline: none;
+            }
+
+            .contactPopupContainer .iti__selected-flag.dropdown-toggle:hover {
+                background-color: $dropdownbg;
+            }
+
+            .iti__selected-flag.dropdown-toggle {
+                background-color: $dropdownbg;
+                border-radius: 10px 0px 0px 10px;
+            }
+
+            .iti.iti--allow-dropdown {
+                width: 100%;
+            }
+
+            .iti--allow-dropdown input::placeholder {
+                color: $placeholder;
+                font-size: $sz-13-font;
+                font-family: $regular-font;
+            }
+
+            .dropdown-menu.show {
+                width: 280px;
+            }
+        }
+
+        .radioGroup {
+            .radio {
+
+
+                .p-radiobutton .p-radiobutton-box.p-highlight {
+                    border-color: $blackColor !important;
+                    background: #fff !important;
+                }
+
+                .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight) {
+                    border-color: $blackColor !important;
+                }
+
+                .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+                    border-color: $blackColor !important;
+                }
+
+                .p-radiobutton .p-radiobutton-box:not(.p-disabled).p-focus {
+                    box-shadow: none;
+                }
+
+                .p-radiobutton-box.p-highlight .p-radiobutton-icon {
+                    background-color: $secondaryColor;
+                }
+            }
+        }
+
+        .custom {
+            border-color: $error !important;
+
+        }
+
+        .ng-invalid.ng-touched {
+            border-color: $error !important;
+        }
+    }
+
+    .p-dialog .p-dialog-header {
+        padding: 0;
+    }
+
+    .p-dialog .p-dialog-content {
+        color: $darkbrown;
+        padding: 0px 25px;
+    }
+
+    .p-dialog .p-dialog-header .p-dialog-header-icon {
+        color: $darkbrown;
+        position: relative;
+        top: 10px;
+        right: 20px;
+    }
+
+    .p-dialog .p-dialog-header .p-dialog-header-icon:focus {
+        box-shadow: none !important;
+    }
+
+    .p-dialog-content{
+        overflow: hidden;
+    }
+    // .p-dialog-content {
+    //     overflow: hidden !important;
+    // }
+
+    // .p-dialog-content {
+    //     overflow: hidden !important;
+    // }
+}
+
+@media (max-width: 1110px) {
+    .contactPopupContainer {
+
+
+
+        .card {
+
+            .inputs {
+                gap: 20px;
+                .column1 {
+                    width: 100%;
+                }
+
+                .column2 {
+                    width: 100%;
+                    // padding-left: 15px;
+                }
+            }
+        }
+    }
+
+}

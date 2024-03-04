@@ -1,0 +1,167 @@
+<div class="contactContainer">
+  <div class="whatsappContainer">
+    <a href="https://web.whatsapp.com"
+      ><img class="whatsapp" src="{{ contactData.whatsappimg }}"
+    /></a>
+  </div>
+  <!-- NAVIGATION STARTS -->
+  <!-- <app-navbar></app-navbar> -->
+
+  <!-- SLIDER STARTS -->
+  <div class="sliderContainer">
+    <div class="sliderImage">
+      <img class="sliderBgImg" src="{{ contactData.sliderImage }}" />
+    </div>
+    <div class="sliderText">
+      <h1>{{ contactData.sliderHeader }}</h1>
+    </div>
+  </div>
+
+  <!--CONTENT STARTS -->
+  <div class="mainContainer">
+    <div class="contentContainer">
+      <div class="contactContent1">
+        <p-card class="card">
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div>
+              <h3>{{ contactData.contentOneHeader }}</h3>
+              <p>{{ contactData.contentOnePara }}</p>
+            </div>
+            <div class="inputs">
+              <div class="inputContainer">
+                <label>NAME*</label>
+
+                <input
+                  type="text"
+                  pInputText
+                  class="p-inputtext-sm"
+                  placeholder="Your Name"
+                  formControlName="name"
+                />
+                <div
+                  *ngIf="
+                    form.controls['name'].invalid &&
+                    (form.controls['name'].dirty ||
+                      form.controls['name'].touched)
+                  "
+                >
+                  <small class="validation-msg">Enter a valid name</small>
+                </div>
+              </div>
+
+              <div class="inputContainer">
+                <label>EMAIL*</label>
+
+                <input
+                  type="text"
+                  pInputText
+                  class="p-inputtext-sm"
+                  placeholder="Your Email*"
+                  formControlName="email"
+                />
+                <div
+                  *ngIf="
+                    form.controls['email'].invalid &&
+                    (form.controls['email'].dirty ||
+                      form.controls['email'].touched)
+                  "
+                >
+                  <small class="validation-msg">Enter a valid email</small>
+                </div>
+              </div>
+
+              <div class="inputContainer">
+                <label>PHONE*</label>
+
+                <!-- <input type="number" pInputText class="p-inputtext-sm" placeholder="Your Phone" formControlName="phone"> -->
+                <angular-phone-number-input
+                class="phoneNumber"
+                formControlName="phone"
+                [defaultCountry]="'SA'" 
+                [error]="form.get('phone')?.touched && form.get('phone')?.invalid"
+
+              ></angular-phone-number-input>
+              
+                <!-- <div *ngIf="form.get('phone')?.touched && form.get('phone')?.invalid">
+                                <small class="validation-msg">Enter a valid phone</small>
+                </div> -->
+              </div>
+              <div class="inputContainer">
+                <label>MESSAGE*</label>
+
+                <textarea
+                  [rows]="5"
+                  [cols]="30"
+                  pInputTextarea
+                  placeholder="Type your Message..."
+                  formControlName="message"
+                ></textarea>
+              </div>
+            </div>
+            <div class="btn">
+              <p-button type="submit">{{
+                contactData.contentOneButton
+              }}</p-button>
+            </div>
+          </form>
+        </p-card>
+      </div>
+      <div class="contactContent2">
+        <h2>{{ contactData.mainHeader }}</h2>
+        <div class="data-1">
+          <h4>
+            <img class="line" src="{{ contactData.headerimg }}" />{{
+              contactData.header1
+            }}
+          </h4>
+          <p>
+            {{ contactData.address1 }} <br />
+            {{ contactData.address2 }}
+          </p>
+          <p>
+            <img class="phone" src="{{ contactData.phoneimg }}" />
+            {{ contactData.phone }}
+          </p>
+        </div>
+        <!-- <div class="data-2">
+          <h4>
+            <img class="line" src="{{ contactData.headerimg }}" />{{
+              contactData.header2
+            }}
+          </h4>
+          <p>
+            {{ contactData.address1 }} <br />
+            {{ contactData.address2 }}
+          </p>
+          <p>
+            <img class="phone" src="{{ contactData.phoneimg }}" />
+            {{ contactData.phone }}
+          </p>
+        </div> -->
+        <div class="data-3">
+          <h2>{{ contactData.header3 }}</h2>
+          <div class="socialIcons">
+            <a href="" target="_blank"
+              ><img src="{{ contactData.socialicon1 }}" alt="Social Icon 1"
+            /></a>
+            <a href="" target="_blank"
+              ><img src="{{ contactData.socialicon2 }}" alt="Social Icon 2"
+            /></a>
+            <a href="" target="_blank"
+              ><img src="{{ contactData.socialicon3 }}" alt="Social Icon 3"
+            /></a>
+            <a href="" target="_blank"
+              ><img src="{{ contactData.socialicon4 }}" alt="Social Icon 4"
+            /></a>
+            <a href="" target="_blank"
+              ><img src="{{ contactData.socialicon5 }}" alt="Social Icon 5"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER STARTS -->
+  <!-- <app-footer></app-footer> -->
+</div>

@@ -1,0 +1,121 @@
+<div class="navMainContainer">
+    <div class="navContainer">
+      <div class="header">
+        <a routerLink=""><img class="head" src="assets/icons/Logo.svg" /></a>
+        <div class="headerSearch" (click)="showSearchPopup()">
+          <img src="{{ navLabels.searchimg }}" alt="" />
+        </div>
+      </div>
+      <div class="navItems">
+        <div class="item1">
+          <p>
+            <img class="phone" src="{{ navLabels.phoneimg }}" />&nbsp;{{
+              navLabels.phone
+            }}
+          </p>
+        </div>
+        <div class="item2">
+          <ul>
+            <li class="home">
+              <a
+                [class.active]="
+                  routeIsActive('/about') ||
+                  routeIsActive('/team') ||
+                  routeIsActive('/join-our-team') ||
+                  routeIsActive('/contact-us')
+                "
+                >{{ navLabels.aboutUs }}</a
+              >
+              <div class="navigation">
+                <div class="item">
+                  <span
+                    class="border"
+                    [class.highlightRoute]="routeIsActive('/about')"
+                  ></span>
+                  <a routerLink="/about">{{ navLabels.aboutCompany }}</a>
+                </div>
+                <div class="item">
+                  <span
+                    class="border"
+                    [class.highlightRoute]="routeIsActive('/team')"
+                  ></span>
+                  <a routerLink="/team">{{ navLabels.ourTeam }}</a>
+                </div>
+                <div class="item">
+                  <span
+                    class="border"
+                    [class.highlightRoute]="routeIsActive('/join-our-team')"
+                  ></span>
+                  <a routerLink="/join-our-team">{{ navLabels.joinOurTeam }}</a>
+                </div>
+                <div class="item">
+                  <span
+                    class="border"
+                    [class.highlightRoute]="routeIsActive('/contact-us')"
+                  ></span>
+                  <a routerLink="/contact-us">{{ navLabels.contactUs }}</a>
+                </div>
+              </div>
+            </li>
+            <!-- off-plan-property -->
+            <li class="home">
+              <a
+                routerLink="/projects"
+                [class.active]="routeIsActive('/projects')"
+                >{{ navLabels.projects }}</a
+              >
+            </li>
+            <li class="home">
+              <a
+                routerLink="/partners-program"
+                [class.active]="routeIsActive('/partners-program')"
+              >
+                {{ navLabels.partnersProgram }}</a
+              >
+            </li>
+            <li class="home">
+              <a
+                routerLink="/list-your-property"
+                [class.active]="routeIsActive('/list-your-property')"
+              >
+                {{ navLabels.listYourProperty }}</a
+              >
+            </li>
+            <li>
+              <a (click)="showSearchPopup()"
+                ><img class="search" src="{{ navLabels.searchimg }}"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="navPanel">
+      <div
+        class="topbarMenu topbarcolor"
+        (click)="toggleMenuClick(); showCloseIcon = true"
+      >
+        <img id="topMenu" src="assets/images/menu.svg" class="topbarIcon" />
+      </div>
+      <p-panelMenu
+        [model]="items"
+        [transitionOptions]="'0.5s ease-in'"
+        [style]="{ width: '300px' }"
+        [hidden]="this.flag"
+      ></p-panelMenu>
+    </div>
+  
+    <!-- <div>
+      <app-search />
+    </div> -->
+  
+    <p-dialog
+      [modal]="true"
+      [draggable]="false"
+      [(visible)]="searchOpen"
+      [style]="{ width: '100%' }"
+    >
+      <app-search />
+    </p-dialog>
+  </div>
+  

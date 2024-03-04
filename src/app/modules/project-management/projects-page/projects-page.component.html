@@ -1,0 +1,140 @@
+<div class="offPlanProjectsContainer">
+    <div class="whatsappContainer" *ngFor="let wp of whatsapp">
+      <a href="https://web.whatsapp.com"
+        ><img class="whatsapp" src="{{ wp.img }}"
+      /></a>
+    </div>
+  
+    <!-- CONTENT STARTS -->
+  
+    <div class="sliderContainer">
+      <div class="sliderImage">
+        <img class="sliderBgImg" src="{{ headerSection.image }}" />
+      </div>
+      <div class="sliderText">
+        <h1>{{ headerSection.label }}</h1>
+      </div>
+    </div>
+  
+    <div class="projectSearch">
+      <div class="searchContainer">
+        <div class="row1">
+          <div class="dropdown1 dropdownFlex">
+            <label>LOCATION</label>
+            <p-multiSelect
+              [options]="location"
+              class="p-inputtext-sm"
+              placeholder="Select"
+              display="chip"
+            ></p-multiSelect>
+            <!-- <p-dropdown
+              [options]="location"
+              class="p-inputtext-sm"
+              placeholder="Search"
+            ></p-dropdown> -->
+          </div>
+          <div class="dropdown2 dropdownFlex">
+            <label>PROPERTY TYPE</label>
+            <p-dropdown
+              [options]="propertyType"
+              class="p-inputtext-sm"
+              placeholder="Select"
+            ></p-dropdown>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="dropdowns">
+            <div class="dropdownFlex">
+              <label>YEAR OF COMPLETION</label>
+              <p-dropdown
+                [options]="completion"
+                class="p-inputtext-sm"
+                placeholder="Select"
+              ></p-dropdown>
+            </div>
+            <div class="dropdownFlex">
+              <label>BEDROOMS</label>
+              <p-dropdown
+                [options]="bedrooms"
+                class="p-inputtext-sm"
+                placeholder="Select"
+              ></p-dropdown>
+            </div>
+          </div>
+  
+          <div class="btn">
+            <p-button type="submit">SEARCH</p-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="offPlanContainer">
+      <div class="offPlanMainContent">
+        <!-- <div class="header" *ngFor="let hd of headerData">
+          <h1>
+            <img class="line" src="{{ hd.headerImage }}" />{{ hd.mainHeader }}
+          </h1>
+        </div> -->
+        <div
+          class="offPlanContent"
+          *ngFor="
+            let data of offplanData
+              | paginate : { itemsPerPage: 2, currentPage: p }
+          "
+        >
+          <div class="offPlanImg">
+            <img src="{{ data.imageUrl }}" />
+          </div>
+          <div class="offPlanDetails">
+            <h1>{{ data.header }}</h1>
+            <div class="para">
+              <p>{{ data.para1 }}</p>
+              <p class="community">{{ data.community }}</p>
+            </div>
+            <div class="details">
+              <p>
+                {{ data.list1 }}<span class="highlight">{{ data.price }}</span>
+              </p>
+              <p>
+                {{ data.list2 }}<span class="highlight">{{ data.bedrooms }}</span>
+              </p>
+              <p>
+                {{ data.list3 }}<span class="highlight">{{ data.types }}</span>
+              </p>
+              <p>
+                {{ data.list4
+                }}<span class="highlight">{{ data.completion }}</span>
+              </p>
+              <p>
+                {{ data.list5 }}<span class="highlight">{{ data.lDate }}</span>
+              </p>
+            </div>
+            <p-button class="btn">{{ data.btn }}</p-button>
+          </div>
+        </div>
+        <div class="pagination">
+          <pagination-controls
+            [previousLabel]="''"
+            [nextLabel]="''"
+            (pageChange)="p = $event"
+          ></pagination-controls>
+        </div>
+      </div>
+    </div>
+  
+    <div class="mapContainer">
+      <iframe
+        class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5315200985538!2d76.99816751480276!3d10.998690392170895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8ff40fe0bc783%3A0x6ea04f62be90bc50!2sThoughtbees%20Technologies%20Private%20Limited!5e0!3m2!1sen!2sin!4v1678789119075!5m2!1sen!2sin"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      >
+      </iframe>
+    </div>
+    <!-- FOOTER STARTS -->
+    <!-- <app-footer></app-footer> -->
+  </div>
+  

@@ -1,0 +1,66 @@
+<div class="footerContainer" *ngFor="let fc of footer">
+    <div class="footerContent">
+      <div class="cont">
+        <div class="cont1">
+          <div>
+            <img class="head" routerLink="" src="{{ fc.header }}" />
+          </div>
+          <div class="para">
+            <p>
+              {{ fc.para }}
+            </p>
+          </div>
+          <div class="socialIcons">
+            <img src="{{ fc.icon1 }}" />
+            <img src="{{ fc.icon2 }}" />
+            <img src="{{ fc.icon3 }}" />
+            <img src="{{ fc.icon4 }}" />
+            <img src="{{ fc.icon5 }}" />
+          </div>
+        </div>
+        <div class="cont2">
+          <div class="sec-1">
+            <ul>
+              <li>
+                <b class="head">{{ fc.listHeader1 }}</b>
+              </li>
+              <li>
+                <a routerLink="/about-us" class="list">{{ fc.l1 }}</a>
+              </li>
+              <li>
+                <a routerLink="/projects" class="list">{{ fc.l2 }}</a>
+              </li>
+              <li>
+                <a class="list">{{ fc.l3 }}</a>
+              </li>
+              <li>
+                <a routerLink="/list-your-property" class="list">{{ fc.l4 }}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sec-2">
+            <ul>
+              <li>
+                <b class="head">{{ fc.listHeader2 }}</b>
+              </li>
+              <li class="list">
+                <img class="phone" src="{{ fc.phoneimg }}" />{{ fc.phone }}
+              </li>
+              <li class="list">
+                <img class="email" src="{{ fc.emailimg }}" />{{ fc.email }}
+              </li>
+              <li class="list">
+                <img class="location" src="{{ fc.locationimg }}" />{{
+                  fc.address
+                }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>{{ fc.cpr1 }} &copy; {{ fc.cpr2 }}</p>
+      </div>
+    </div>
+  </div>
+  

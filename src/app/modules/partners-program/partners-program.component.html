@@ -1,0 +1,49 @@
+<div class="joinTeamContainer">
+    <div class="whatsappContainer" *ngFor="let wp of whatsapp">
+      <a href="https://web.whatsapp.com"
+        ><img class="whatsapp" src="{{ wp.img }}"
+      /></a>
+    </div>
+  
+    <!-- NAVIGATION STARTS  -->
+    <!-- <app-navbar></app-navbar> -->
+  
+    <!-- SLIDER STARTS -->
+    <div class="sliderContainer" *ngFor="let sl of slider">
+      <div class="sliderImage">
+        <img class="sliderBgImg" src="{{ sl.img }}" />
+      </div>
+      <div class="sliderText">
+        <h1>{{ sl.header }}</h1>
+      </div>
+    </div>
+  
+    <!--CONTENT STARTS -->
+    <div class="mainContainer" *ngFor="let ct of content">
+      <div class="contentContainer">
+        <div class="header">
+          <div class="headerImg">
+            <img src="{{ ct.headerimg }}" />
+          </div>
+          <div class="headerTitle">
+            <h4>{{ ct.h4 }}</h4>
+            <h1>{{ ct.h1 }}</h1>
+          </div>
+        </div>
+        <div class="joinTeamContent">
+            <div class="contText">
+                <h3>{{ ct.header }}</h3>
+                <p>{{ ct.para1 }}</p>
+                <p>{{ ct.para2 }}</p>
+                <p-button (click)="showPopup()" class="btn">{{ ct.btn }}</p-button>
+              </div>
+          <div class="contImg">
+            <div><img src="{{ ct.img }}" /></div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
